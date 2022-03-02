@@ -1,3 +1,3 @@
-# Skeleton App
+# Pokemon Trainers Demo
 
-This is a very basic skeleton express app you can use to build from on labs and projects.
+A demo app that shows how we can search for and choose trainers based on pokemon types.
