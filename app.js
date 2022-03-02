@@ -2,9 +2,6 @@ const express = require('express');
 
 let app = express();
 
-// Import controllers
-const trainerController = require('./controllers/trainers');
-
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
 	.create({ defaultLayout:'main' });
@@ -15,23 +12,10 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
-// Lists all pokemon types
+
 app.get('/', function(req, res) {
 	res.render('home');
 });
-
-// Gets trainers by pokemon type
-app.get('/trainers/:type', trainerController.listTrainers);
-
-// Show a sign-up form for a specific trainer
-app.get('/trainers/invite/:trainerId', trainerController.trainerForm);
-
-// Handle the form submission
-app.post('/trainers/invite/:trainerId', trainerController.processTrainerForm);
-
-app.get('/thanks', (req, res) => {
-	res.render('thanks');
-})
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
