@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(160, 160, 160);
+}
+
+/* DASHBOARD CARDS STYLES */
+.card {
+    transition: 0.3s;
+    border: 5px black;
+    width: 400px;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+    background-color: rgb(2, 0, 141);
+}
+
+.card:hover {
+/* .container:hover { */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.card a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.container {
+    padding: 2px 16px;
+    background-color: rgb(160, 190, 247);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.classImg {
+    width: 100%;
+}
+
+
+/* NAVBAR STYLES  */
+.active {
+    background-color: #001d9e;
+    /* background-color: #04AA6D; */
+}
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 82, 204);
+    /* background-color: #333; */
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+#navLI {
+    float: left;
+}
+
+#nav {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}

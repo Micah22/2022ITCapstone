@@ -1,0 +1,43 @@
+{{!-- <h1>Dashboard</h1> --}}
+
+
+
+
+
+
+{{#each student}}
+<h1>Welcome {{name}} to your CollegeConnect Dashbord</h1>
+
+
+
+<div class="card">
+    <a href="/{{classes.one}}">
+        <div class="container">
+            <h2>{{classes.one}}: [Class Name Here]</h2>
+            {{!-- <p>Architect & Engineer</p> --}}
+        </div>
+        <img src="images/class.jpg" class="classImg">
+    </a>
+</div>
+
+<div class="card">
+    <a href="/{{classes.two}}">
+        <div class="container">
+            <h2>{{classes.two}}: [Class Name Here]</h2>
+        </div>
+        <img src="images/class.jpg" class="classImg">
+    </a>
+</div>
+
+<div class="card">
+    <a href="/{{classes.three}}">
+        <div class="container">
+            <h2>{{classes.three}}: [Class Name Here]</h2>
+        </div>
+        <img src="images/class.jpg" class="classImg">
+    </a>
+</div>
+
+
+
+{{/each}}

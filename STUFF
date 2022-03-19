@@ -1,0 +1,30 @@
+[
+    {
+        "id": 101,
+        "name": "Micah",
+        
+        "standing": "",
+        "studentID": 233067,
+        "password": "zN3FTm",
+        "year": "Senior",
+        "classes": [
+            {
+                "number": "COP3813",
+                "image": "images/class.jpg"
+            },
+            {
+                "number": "CTS4457",
+                "image": "images/class2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Dale",
+        "classes": {"one": "COP3813", "two": "CTS4457", "three": "CTS4911"},
+        "standing": "",
+        "studentID": 233067,
+        "password": "zN3FTm",
+        "year": "Senior"
+    }
+]

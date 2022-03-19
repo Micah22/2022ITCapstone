@@ -1,5 +1,5 @@
 const express = require('express');
-
+const studentService = require('./lib/studentService')
 let app = express();
 
 // set up handlebars view engine
@@ -12,10 +12,33 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
-
 app.get('/', function(req, res) {
-	res.render('home');
+
+	const student = studentService.getClassesByStudent()
+	
+	res.render('dashboard.handlebars', {
+		student: student
+	});
 });
+
+
+app.get('/collab', function(req, res) {
+	res.render('collab')
+})
+
+
+app.get('/collab', function(req, res) {
+	res.render('collab')
+})
+
+
+app.get('/collab', function(req, res) {
+	res.render('collab')
+})
+
+
+
+
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){

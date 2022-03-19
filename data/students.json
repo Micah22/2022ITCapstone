@@ -1,0 +1,20 @@
+[
+    {
+        "id": 101,
+        "name": "Micah",
+        "classes": {"one": "COP3813", "two": "CTS4457", "three": "CTS4911"},
+        "standing": "",
+        "studentID": 233067,
+        "password": "zN3FTm",
+        "year": "Senior"
+    },
+    {
+        "id": 102,
+        "name": "Dale",
+        "classes": {"one": "COP3813", "two": "CTS4457", "three": "CTS4911"},
+        "standing": "",
+        "studentID": 233068,
+        "password": "asK1m9",
+        "year": "Senior"
+    }
+]
