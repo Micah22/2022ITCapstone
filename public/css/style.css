@@ -10,7 +10,8 @@ body {
     padding: 5px;
     margin: 10px;
     float: left;
-    background-color: rgb(2, 0, 141);
+    background-color: rgb(70, 70, 70);
+    /* background-color: rgb(2, 0, 141); */
 }
 
 .card:hover {
@@ -33,7 +34,10 @@ body {
     width: 100%;
 }
 
-
+#dash {
+    float: left;
+    height: 100%;
+}
 /* NAVBAR STYLES  */
 .active {
     background-color: #001d9e;
@@ -66,4 +70,32 @@ body {
 #nav:hover {
     background-color: rgb(255, 255, 255);
     color: black;
+}
+
+/* SIDE BAR STYLES */
+#right-bar {
+    float: right;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(90, 90, 90, 0.438);
+}
+
+#to-do {
+    height: 100%;
+}
+
+#recent {
+    height: 100%;
+}
+
+#notifHeader {
+    font-size: 20px;
+}
+
+#notifBody {
+    font-size: 15px;
+}
+
+#notifClass {
+    font-size: 12px;
 }

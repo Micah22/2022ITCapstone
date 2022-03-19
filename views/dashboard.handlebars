@@ -1,43 +1,93 @@
 {{!-- <h1>Dashboard</h1> --}}
 
 
-
-
-
-
 {{#each student}}
 <h1>Welcome {{name}} to your CollegeConnect Dashbord</h1>
 
 
+<div id="dash">
+    <div class="card">
+        <a href="/{{classes.one}}">
+            <div class="container">
+                <h2>{{classes.one}}: [Class Name Here]</h2>
+                {{!-- <p>Architect & Engineer</p> --}}
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
 
-<div class="card">
-    <a href="/{{classes.one}}">
-        <div class="container">
-            <h2>{{classes.one}}: [Class Name Here]</h2>
-            {{!-- <p>Architect & Engineer</p> --}}
-        </div>
-        <img src="images/class.jpg" class="classImg">
-    </a>
+    <div class="card">
+        <a href="/{{classes.two}}">
+            <div class="container">
+                <h2>{{classes.two}}: [Class Name Here]</h2>
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="/{{classes.three}}">
+            <div class="container">
+                <h2>{{classes.three}}: [Class Name Here]</h2>
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
 </div>
-
-<div class="card">
-    <a href="/{{classes.two}}">
-        <div class="container">
-            <h2>{{classes.two}}: [Class Name Here]</h2>
+<center>
+    <div id="right-bar">
+        <div id="to-do">
+            <h2>------To-Do------</h2>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>Midterms graded</strong>
+                </div>
+                <div id="notifBody">
+                    Mar 14 at 9:40pm
+                </div>
+            </div>
+            <hr>
+            
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Header}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+            <hr>
         </div>
-        <img src="images/class.jpg" class="classImg">
-    </a>
-</div>
-
-<div class="card">
-    <a href="/{{classes.three}}">
-        <div class="container">
-            <h2>{{classes.three}}: [Class Name Here]</h2>
+        <div id="recent">
+            <h2>------Recent------</h2>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>Module 3 - Assignment</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>Data Visualization - CTS4457</strong>
+                </div>
+                <div id="notifBody">
+                    "Looks good!"
+                </div>
+            </div>
+            <hr>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Assignment}</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>{Class}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+            <hr>
+            <hr>
         </div>
-        <img src="images/class.jpg" class="classImg">
-    </a>
-</div>
-
+    </div>
+</center>
 
 
 {{/each}}
