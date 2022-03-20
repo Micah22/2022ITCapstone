@@ -26,6 +26,7 @@ body {
 
 .container {
     padding: 2px 16px;
+    height: 100px;
     background-color: rgb(160, 190, 247);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

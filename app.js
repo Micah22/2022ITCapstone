@@ -69,8 +69,8 @@ app.use(function (req, res, next) {
 
 
 app.get('/', function (req, res) {
-	studentService.getClassesByStudent(req.session.user)
-	const student = studentService.getClassesByStudent()
+	// studentService.getClassesByStudent(req.session.user)
+	const student = studentService.getClassesByStudent(req.session.user)
 
 	res.render('dashboard', {
 		username: req.session.user,
@@ -83,6 +83,9 @@ app.get('/collab', function (req, res) {
 	res.render('collab')
 })
 
+app.get('/New', function (req, res) {
+	res.render('index')
+})
 
 
 
