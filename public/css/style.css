@@ -39,7 +39,7 @@ body {
     float: left;
     height: 100%;
     width: 70%;
-    background-color: rgb(241, 112, 241);
+    /* background-color: rgb(241, 112, 241); */
 }
 /* NAVBAR STYLES  */
 .active {
