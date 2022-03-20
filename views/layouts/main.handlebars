@@ -4,7 +4,7 @@
 <head>
     <title>CollegeConnect</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -28,20 +28,50 @@
     <div id="main">
 
         <ul id="navBar">
-            {{!-- <li id="navLI"><a id="nav" class="active" href="/">Home</a></li> --}}
-            <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li>
-            <li id="navLI"><a id="nav" href="/">Home</a></li>
-            <li id="navLI"><a id="nav" href="/">Assignments</a></li>
-            <li id="navLI"><a id="nav" href="/collab">Collab</a></li>
-            <li id="navLI"><a id="nav" href="/">Calendar</a></li>
-            <li id="navLI"><a id="nav" href="/">Inbox</a></li>
+            {{!-- <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li> --}}
+            {{!-- <li id="navLI"><a id="nav" href="/">Assignments</a></li> --}}
+            <li id="navLI"><a id="nav" href="/" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
             <div class="topnav-right">
-            <li id="navLI"><a id="nav" href="/login">Log Out</a></li>
+                <li id="navLI"><a id="nav" href="/login">Log Out</a></li>
             </div>
 
         </ul>
         {{{body}}}
+        <div class="icon-bar">
+            <div class="tooltip">
+                <a href="/Dashboard"><i class="fa fa-home"></i></a>
+                <span class="tooltiptext">Home</span>
+            </div>
+            <div class="tooltip">
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <span class="tooltiptext">Email</span>
+            </div>
+            <div class="tooltip">
+                <a href="/Multitask"><i class="fa fa-object-group"></i></a>
+                <span class="tooltiptext">MultiTask</span>
+            </div>
+            <div class="tooltip">
+                <a href="#"><i class="fa fa-group"></i></a>
+                <span class="tooltiptext">Collab</span>
+            </div>
+            <div class="tooltip">
+                <a href="#"><i class="fa fa-calendar"></i></a>
+                <span class="tooltiptext">Calendar</span>
+            </div>
+            <div class="tooltip">
+                <a href="#"><i class="fa fa-address-book"></i></a>
+                <span class="tooltiptext">Contacts</span>
+            </div>
+
+            {{!-- <a href="#"><i class="fa fa-search"></i></a> --}}
+            {{!-- <a href="#"><i class="fa fa-globe"></i></a> --}}
+            {{!-- <a href="#"><i class="fa fa-trash"></i></a> --}}
+        </div>
     </div>
 </body>
+
+{{!-- <div class="footer">
+    <p>Footer</p>
+</div> --}}
 
 </html>

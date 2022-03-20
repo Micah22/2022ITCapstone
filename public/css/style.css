@@ -10,7 +10,7 @@ body {
 .card {
     transition: 0.3s;
     border: 5px black;
-    width: 400px;
+    width: 300px;
     padding: 5px;
     margin: 10px;
     float: left;
@@ -90,6 +90,16 @@ body {
 
 
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 1px solid black;
+    color: rgb(0, 0, 0);
+    /* text-align: center; */
+  }
 
 
 /* SIDE BAR STYLES */
@@ -145,6 +155,33 @@ iframe {
 
 
 
+.icon-bar {
+    float: right;
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* background-color: #555; */
+    background-color: rgb(0, 54, 136);
+  }
+  
+  .icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font-size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+
+
+
+
 
 
 
@@ -196,10 +233,60 @@ iframe {
   #main {
     transition: margin-left .5s;
     padding: 20px;
+    margin-right: 40px;
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    top: 25px;
+    right: 105%;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
   }

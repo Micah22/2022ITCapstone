@@ -42,13 +42,13 @@ app.use(express.static(__dirname + '/public'));
 
 // DISPLAY LOGIN PROMPT 
 app.get("/login", function (req, res) {
-	res.render("login", {layout: 'login'});
+	res.render("login", { layout: 'login' });
 });
 
 // Handle the login action
 app.post("/login", function (req, res) {
 	req.session.user = req.body.username; // Set the username
-	res.redirect("/");
+	res.redirect("/Dashboard");
 });
 
 // Middleware that will enforce logins for all subsequent routes
@@ -59,7 +59,7 @@ app.use(function (req, res, next) {
 
 		// Otherwise ask them to log in
 	} else {
-		res.render("login",  {
+		res.render("login", {
 			layout: 'login',
 			error: "You need to log in!",
 		});
@@ -69,24 +69,32 @@ app.use(function (req, res, next) {
 
 
 
-app.get('/', function (req, res) {
+app.get('/:route', function (req, res) {
 	// studentService.getClassesByStudent(req.session.user)
 	const student = studentService.getClassesByStudent(req.session.user)
+	
 
-	res.render('dashboard', {
-		username: req.session.user,
-		student: student
-	});
+	if (req.params.route === 'Dashboard') {
+		res.render('dashboard', {
+			route: req.params.route,
+			username: req.session.user,
+			student: student
+		});
+	} else if (req.params.route === 'Multitask') {
+		res.render('multitask', {
+			route: req.params.route,
+			username: req.session.user,
+			student: student
+		});
+	}
 });
 
 
-app.get('/collab', function (req, res) {
-	res.render('collab')
-})
+// app.get('/multitask', function (req, res) {
+// 	res.render('multitask')
+// })
 
-app.get('/New', function (req, res) {
-	res.render('index')
-})
+
 
 
 
