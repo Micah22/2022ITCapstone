@@ -93,11 +93,18 @@ body {
 
 
 /* SIDE BAR STYLES */
+center div div h2 {
+    border-bottom: 1px solid black;
+}
 #right-bar {
     float: right;
-    width: 250px;
+    width: 15%;
+    /* width: 250px; */
+    padding-left: 5px;
+    /* position: fixed; */
+    /* right: 0; */
     height: 100%;
-    background-color: rgba(90, 90, 90, 0.438);
+    border-left: 1px solid black;
 }
 
 #to-do {
@@ -106,6 +113,12 @@ body {
 
 #recent {
     height: 100%;
+}
+
+#notif {
+    margin-top: 5px;
+    padding: 14px 16px;
+    background-color: rgba(43, 43, 43, 0.281);
 }
 
 #notifHeader {
