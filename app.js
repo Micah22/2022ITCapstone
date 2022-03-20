@@ -42,7 +42,7 @@ app.use(express.static(__dirname + '/public'));
 
 // DISPLAY LOGIN PROMPT 
 app.get("/login", function (req, res) {
-	res.render("login");
+	res.render("login", {layout: 'login'});
 });
 
 // Handle the login action
@@ -59,7 +59,8 @@ app.use(function (req, res, next) {
 
 		// Otherwise ask them to log in
 	} else {
-		res.render("login", {
+		res.render("login",  {
+			layout: 'login',
 			error: "You need to log in!",
 		});
 	}
