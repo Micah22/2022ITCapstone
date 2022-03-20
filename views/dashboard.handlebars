@@ -1,15 +1,15 @@
 {{!-- <h1>Dashboard</h1> --}}
 
 
+<h1>Welcome {{username}} to your CollegeConnect Dashbord</h1>
 {{#each student}}
-<h1>Welcome {{name}} to your CollegeConnect Dashbord</h1>
 
 
 <div id="dash">
     <div class="card">
         <a href="/{{classes.one}}">
             <div class="container">
-                <h2>{{classes.one}}: [Class Name Here]</h2>
+                <h2>{{classes.one}}</h2>
                 {{!-- <p>Architect & Engineer</p> --}}
             </div>
             <img src="images/class.jpg" class="classImg">
@@ -19,20 +19,43 @@
     <div class="card">
         <a href="/{{classes.two}}">
             <div class="container">
-                <h2>{{classes.two}}: [Class Name Here]</h2>
+                <h2>{{classes.two}}</h2>
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
+    {{#if classes.three}}
+    <div class="card">
+        <a href="/{{classes.three}}">
+            <div class="container">
+                <h2>{{classes.three}}</h2>
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
+    {{/if}}
+    {{#if classes.four}}
+    <div class="card">
+        <a href="/{{classes.four}}">
+            <div class="container">
+                <h2>{{classes.four}}</h2>
             </div>
             <img src="images/class.jpg" class="classImg">
         </a>
     </div>
 
+    {{/if}}
+    {{#if classes.five}}
     <div class="card">
-        <a href="/{{classes.three}}">
+        <a href="/{{classes.five}}">
             <div class="container">
-                <h2>{{classes.three}}: [Class Name Here]</h2>
+                <h2>{{classes.five}}</h2>
             </div>
             <img src="images/class.jpg" class="classImg">
         </a>
     </div>
+
+    {{/if}}
 </div>
 <center>
     <div id="right-bar">
@@ -47,7 +70,7 @@
                 </div>
             </div>
             <hr>
-            
+
             <div id="notif">
                 <div id="notifHeader">
                     <strong>{Header}</strong>

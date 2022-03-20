@@ -2,7 +2,11 @@
     {
         "id": 101,
         "name": "Micah",
-        "classes": {"one": "COP3813", "two": "CTS4457", "three": "CTS4911"},
+        "classes": {
+            "one": "Server-Side Programming - COP3813",
+            "two": "Data Visualization - CTS4457",
+            "three": "Information Technology Capstone - CTS4911"
+        },
         "standing": "",
         "studentID": 233067,
         "password": "zN3FTm",
@@ -10,11 +14,31 @@
     },
     {
         "id": 102,
-        "name": "Dale",
-        "classes": {"one": "COP3813", "two": "CTS4457", "three": "CTS4911"},
+        "name": "Derek",
+        "classes": {
+            "one": "Information Tech Capstone - CTS4911",
+            "two": "Cloud Computing - CET4772",
+            "three": "Operating Systems Concepts - CGS3763",
+            "four": "Data Visualization - CTS4457"
+        },
         "standing": "",
         "studentID": 233068,
         "password": "asK1m9",
         "year": "Senior"
+    },
+    {
+        "id": 103,
+        "name": "James",
+        "classes": {
+            "one": "Elements of Statistics - STA2023",
+            "two": "Programming Using Java or C++ - COP2253",
+            "three": "Personal Computer Applications - CGS2570",
+            "four": "Precalculus with Trigonometry - MAC1140",
+            "five": "Script Programming - COP2830"
+        },
+        "standing": "",
+        "studentID": 233068,
+        "password": "asK1m9",
+        "year": "Junior"
     }
 ]
