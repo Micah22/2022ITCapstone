@@ -31,7 +31,7 @@ app.use(
 		saveUninitialized: true,
 		cookie: { secure: false },
 	})
-);
+);wafnewl;fn
 
 // PARSE APPLICATION/JSON
 app.use(bodyParser.json())
