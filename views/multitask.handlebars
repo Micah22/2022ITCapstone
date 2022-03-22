@@ -1,6 +1,54 @@
 {{!-- <h1>Collaboration Area</h1> --}}
+<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
 
-<iframe src="" name="myFrame"></iframe>
-<p><a href="https://my.uwf.edu/" target="myFrame">Open Canvas</a></p>
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+{{!-- <iframe src="" name="myFrame"></iframe> --}}
+{{!-- <p><a href="https://my.uwf.edu/" target="myFrame">Open Canvas</a></p>
 <p><a href="https://www.github.com" target="myFrame">Open GitHub.com</a></p>
-<p><a href="https://www.amazon.com" target="myFrame">Open Amazon.com</a></p>
+<p><a href="https://www.amazon.com" target="myFrame">Open Amazon.com</a></p> --}}
+
+
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Google Drive')">Google Drive</button>
+    <button class="tablinks" onclick="openCity(event, 'Discord')">Discord</button>
+    <button class="tablinks" onclick="openCity(event, 'Quizlet')">Quizlet</button>
+</div>
+
+<!-- Tab content -->
+<div id="Google Drive" class="tabcontent">
+    <h3>Google Drive</h3>
+    <iframe src="" name="myFrame"></iframe>
+    {{!-- <iframe src="www.google.com" name="myFrame"></iframe> --}}
+</div>
+
+<div id="Discord" class="tabcontent">
+    <h3>Discord</h3>
+    <iframe src="" name="myFrame"></iframe>
+    {{!-- <iframe src="www.discord.com" name="myFrame"></iframe> --}}
+</div>
+
+<div id="Quizlet" class="tabcontent">
+    <h3>Quizlet</h3>
+    <iframe src="" name="myFrame"></iframe>
+    {{!-- <iframe src="www.quizlet.com" name="myFrame"></iframe> --}}
+</div>

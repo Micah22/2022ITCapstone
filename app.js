@@ -4,6 +4,7 @@ let app = express();
 const bodyParser = require('body-parser')
 const mysql = require('mysql')
 const session = require("express-session");
+const { isStudentInDatabase } = require('./lib/studentService');
 
 require('dotenv').config()
 
@@ -70,9 +71,8 @@ app.use(function (req, res, next) {
 
 
 app.get('/:route', function (req, res) {
-	// studentService.getClassesByStudent(req.session.user)
 	const student = studentService.getClassesByStudent(req.session.user)
-	
+
 
 	if (req.params.route === 'Dashboard') {
 		res.render('dashboard', {
@@ -90,9 +90,9 @@ app.get('/:route', function (req, res) {
 });
 
 
-// app.get('/multitask', function (req, res) {
-// 	res.render('multitask')
-// })
+app.get('/norecord', function (req, res) {
+	res.render('norecord')
+})
 
 
 

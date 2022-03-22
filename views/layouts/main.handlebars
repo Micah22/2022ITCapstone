@@ -18,6 +18,18 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
+
+
+
+
+        function openOverlay() {
+            document.getElementById("rightOverlay").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeOverlay() {
+            document.getElementById("rightOverlay").style.width = "0";
+        }
     </script>
 
     <div id="mySidenav" class="sidenav">
@@ -28,9 +40,9 @@
     <div id="main">
 
         <ul id="navBar">
-            {{!-- <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li> --}}
+            <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li>
             {{!-- <li id="navLI"><a id="nav" href="/">Assignments</a></li> --}}
-            <li id="navLI"><a id="nav" href="/" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
+            <li id="navLI"><a id="nav" href="#" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
             <div class="topnav-right">
                 <li id="navLI"><a id="nav" href="/login">Log Out</a></li>
             </div>
@@ -51,7 +63,7 @@
                 <span class="tooltiptext">MultiTask</span>
             </div>
             <div class="tooltip">
-                <a href="#"><i class="fa fa-group"></i></a>
+                <a onclick="openOverlay()"><i class="fa fa-group"></i></a>
                 <span class="tooltiptext">Collab</span>
             </div>
             <div class="tooltip">
@@ -67,11 +79,31 @@
             {{!-- <a href="#"><i class="fa fa-globe"></i></a> --}}
             {{!-- <a href="#"><i class="fa fa-trash"></i></a> --}}
         </div>
+
+
+
+        <div id="rightOverlay" class="rightOverlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
+            <p>Collaborate</p>
+            <a href="#">IT Capstone Team #2</a>
+            <hr>
+            <p>Study Groups</p>
+            <a href="#">Scaling Networks</a>
+            <a href="#">Data Visualization</a>
+        </div>
+
+
+
+
+
+
+
+
     </div>
 </body>
 
-{{!-- <div class="footer">
+<div class="footer">
     <p>Footer</p>
-</div> --}}
+</div>
 
 </html>

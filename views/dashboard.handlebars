@@ -2,6 +2,7 @@
 
 
 <h1>Welcome {{username}}!</h1>
+<hr>
 {{#each student}}
 
 
@@ -69,7 +70,14 @@
                     Mar 14 at 9:40pm
                 </div>
             </div>
-
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Header}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
             <div id="notif">
                 <div id="notifHeader">
                     <strong>{Header}</strong>
@@ -103,6 +111,18 @@
                     {Body}
                 </div>
             </div>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Assignment}</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>{Class}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+            
         </div>
     </div>
 </center>
