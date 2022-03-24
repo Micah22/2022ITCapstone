@@ -1,118 +1,125 @@
-const express = require('express');
-const studentService = require('./lib/studentService')
-let app = express();
+const express = require('express')
 const bodyParser = require('body-parser')
 const mysql = require('mysql')
-const session = require("express-session");
-const { isStudentInDatabase } = require('./lib/studentService');
 
-require('dotenv').config()
+const app = express()
+const port = process.env.PORT || 5000;
 
-// set up handlebars view engine
-let handlebars = require('express-handlebars')
-	.create({ defaultLayout: 'main' });
-app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars');
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.set('port', process.env.PORT || 3000);
-
-// SETTING UP BODY PARSER 
-app.use(bodyParser.urlencoded({ extended: true }))
-
-// Set up cookie parser and sessions
-const COOKIE_SECRET = "keyboard cat"; // My secret to secure cookies
-app.use(require("cookie-parser")(COOKIE_SECRET)); // Parse incoming cookies
-
-// Set up session for the user, based on cookies
-app.use(
-	session({
-		secret: COOKIE_SECRET,
-		resave: false,
-		saveUninitialized: true,
-		cookie: { secure: false },
-	})
-)
-
-// PARSE APPLICATION/JSON
+// parse application/json
 app.use(bodyParser.json())
 
-// ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
-app.use(express.static(__dirname + '/public'));
+// MySQL
+const pool  = mysql.createPool({
+    connectionLimit : 10,
+    host            : 'localhost',
+    user            : 'root',
+    password        : 'password',
+    database        : 'userservice'
+})
+   
 
+app.get('', (req, res) => {
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log('connected as id ' + connection.threadId)
+        connection.query('SELECT * from name', (err, rows) => {
+            connection.release() // return the connection to pool
 
+            if (!err) {
+                res.send(rows)
+            } else {
+                console.log(err)
+            }
 
-// DISPLAY LOGIN PROMPT 
-app.get("/login", function (req, res) {
-	res.render("login", { layout: 'login' });
+            // if(err) throw err
+            console.log('The data from users table is: \n', rows)
+        })
+    })
+})
+
+// Get an user
+app.get('/:id', (req, res) => {
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        connection.query('SELECT * FROM name WHERE id = ?', [req.params.id], (err, rows) => {
+            connection.release() // return the connection to pool
+            if (!err) {
+                res.send(rows)
+            } else {
+                console.log(err)
+            }
+            
+            console.log('The data from users table is: \n', rows)
+        })
+    })
 });
 
-// Handle the login action
-app.post("/login", function (req, res) {
-	req.session.user = req.body.username; // Set the username
-	res.redirect("/Dashboard");
+// Delete a user
+app.delete('/:id', (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        connection.query('DELETE FROM name WHERE id = ?', [req.params.id], (err, rows) => {
+            connection.release() // return the connection to pool
+            if (!err) {
+                res.send(`users with the record ID ${[req.params.id]} has been removed.`)
+            } else {
+                console.log(err)
+            }
+            
+            console.log('The data from users table is: \n', rows)
+        })
+    })
 });
 
-// Middleware that will enforce logins for all subsequent routes
-app.use(function (req, res, next) {
-	// If they are logged in (have a user object set)
-	if (req.session.user) {
-		next()
+// Add user
+app.post('', (req, res) => {
 
-		// Otherwise ask them to log in
-	} else {
-		res.render("login", {
-			layout: 'login',
-			error: "You need to log in!",
-		});
-	}
-});
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        
+        const params = req.body
+        connection.query('INSERT INTO name SET ?', params, (err, rows) => {
+        connection.release() // return the connection to pool
+        if (!err) {
+            res.send(`user with the record ID  has been added.`)
+        } else {
+            console.log(err)
+        }
+        
+        console.log('The data from users table is: \n', rows)
 
-
-
-
-app.get('/:route', function (req, res) {
-	const student = studentService.getClassesByStudent(req.session.user)
-
-
-	if (req.params.route === 'Dashboard') {
-		res.render('dashboard', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	} else if (req.params.route === 'Multitask') {
-		res.render('multitask', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	}
+        })
+    })
 });
 
 
-app.get('/norecord', function (req, res) {
-	res.render('norecord')
+app.put('', (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log(`connected as id ${connection.threadId}`)
+
+        const { id, name, tagline, description, image } = req.body
+
+        connection.query('UPDATE name SET name = ?, tagline = ?, description = ?, image = ? WHERE id = ?', [name, tagline, description, image, id] , (err, rows) => {
+            connection.release() // return the connection to pool
+
+            if(!err) {
+                res.send(`users with the name: ${name} has been added.`)
+            } else {
+                console.log(err)
+            }
+
+        })
+
+        console.log(req.body)
+    })
 })
 
 
-
-
-
-
-// 404 catch-all handler (middleware)
-app.use(function (req, res, next) {
-	res.status(404);
-	res.render('404');
-});
-
-// 500 error handler (middleware)
-app.use(function (err, req, res, next) {
-	console.error(err.stack);
-	res.status(500);
-	res.render('500');
-});
-
-app.listen(app.get('port'), function () {
-	console.log('Express started on http://localhost:' +
-		app.get('port') + '; press Ctrl-C to terminate.');
-});
+// Listen on enviroment port or 5000
+app.listen(port, () => console.log(`Listening on port ${port}`))
