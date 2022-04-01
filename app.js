@@ -46,10 +46,19 @@ app.get("/login", function (req, res) {
 });
 
 // Handle the login action
-app.post("/login", function (req, res) {
-	req.session.user = req.body.username; // Set the username
+app.post("/login", async function (req, res) {
+	req.session.user = req.body.username;
+	const student = await studentService.isStudentInDatabase(req.body.username, req.body.password)
+	console.log(student)
+	// console.log(req.body.username)
+	// console.log(req.body.password)
 	res.redirect("/Dashboard");
 });
+
+// app.post("/login", function (req, res) {
+// 	req.session.user = req.body.username;
+// 	res.redirect("/Dashboard");
+// });
 
 // Middleware that will enforce logins for all subsequent routes
 app.use(function (req, res, next) {
