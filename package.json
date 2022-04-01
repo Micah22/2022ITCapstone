@@ -1,13 +1,15 @@
 {
-  "name": "skeleton",
+  "name": "nodejs-crud",
   "version": "1.0.0",
-  "description": "This is a simple app to get you started. Change the description as needed.",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Your Name Here",
+  
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3",
