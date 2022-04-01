@@ -37,9 +37,7 @@ app.use(
 	})
 );
 
-
-
-
+const studentService = require('./services/studentService')
 
 
 // DISPLAY LOGIN PROMPT 
@@ -69,9 +67,9 @@ app.use(function (req, res, next) {
 });
 
 // IMPORT THE CONTROLLER(S)
-const studentController = require('./controllers/studentController')
+const studentController = require('./controllers/studentController');
+const { compare } = require('bcrypt');
 
-app.get('/', studentController.loginRoute);
 app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
 
