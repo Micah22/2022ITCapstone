@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/public'));
 // SETTING UP BODY PARSER 
 app.use(express.urlencoded({}))
 
-// database setupd
+// database setup
 require("./models/db");
 
 
