@@ -1,0 +1,142 @@
+[
+    {
+        "studentId": 233067,
+        "name": "Micah",
+        "username": "mkb57",
+        "password": "zN3FTm",
+        "year": "Senior",
+        "classes": [
+            {
+                "courseCode": "COP3813",
+                "courseName": "Server-Side Programming",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "CTS4457",
+                "courseName": "Data Visualization",
+                "courseGrade": "C"
+            },
+            {
+                "courseCode": "CTS4911",
+                "courseName": "Information Technology Capstone",
+                "courseGrade": "B"
+            }
+        ]
+    },
+    {
+        "studentId": 233068,
+        "name": "Derek",
+        "username": "drj35",
+        "password": "asK1m9",
+        "year": "Senior",
+        "classes": [
+            {
+                "courseCode": "CET4772",
+                "courseName": "Cloud Computing",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "CTS4457",
+                "courseName": "Data Visualization",
+                "courseGrade": "C"
+            },
+            {
+                "courseCode": "CTS4911",
+                "courseName": "Information Technology Capstone",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "CGS3763",
+                "courseName": "Operating Systems Concepts",
+                "courseGrade": "B"
+            }
+        ]
+    },
+    {
+        "studentId": 231643,
+        "name": "James",
+        "username": "jbb70",
+        "password": "d6mk9a",
+        "year": "Junior",
+        "classes": [
+            {
+                "courseCode": "STA2023",
+                "courseName": "Elements of Statistics",
+                "courseGrade": "D"
+            },
+            {
+                "courseCode": "COP2253",
+                "courseName": "Programming Using Java",
+                "courseGrade": "B"
+            },
+            {
+                "courseCode": "CGS2570",
+                "courseName": "Personal Computer Applications",
+                "courseGrade": "C"
+            },
+            {
+                "courseCode": "MAC1140",
+                "courseName": "Precalculus with Trigonometry",
+                "courseGrade": "C"
+            },
+            {
+                "courseCode": "COP2830",
+                "courseName": "Script Programming",
+                "courseGrade": "F"
+            }
+        ]
+    },
+    {
+        "studentId": 20419,
+        "name": "Bruno",
+        "username": "bsa13",
+        "password": "U4dkY9",
+        "year": "Senior",
+        "classes": [
+            {
+                "courseCode": "STA2023",
+                "courseName": "Elements of Statistics",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "COP2253",
+                "courseName": "Programming Using Java",
+                "courseGrade": "B"
+            },
+            {
+                "courseCode": "CGS2570",
+                "courseName": "Personal Computer Applications",
+                "courseGrade": "B"
+            },
+            {
+                "courseCode": "COP2830",
+                "courseName": "Script Programming",
+                "courseGrade": "A"
+            }
+        ]
+    },
+    {
+        "studentId": 26827,
+        "name": "Sarah",
+        "username": "sej46",
+        "password": "H9IQvc",
+        "year": "Senior",
+        "classes": [
+            {
+                "courseCode": "STA2023",
+                "courseName": "Elements of Statistics",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "COP2253",
+                "courseName": "Data Visualization",
+                "courseGrade": "A"
+            },
+            {
+                "courseCode": "CET4772",
+                "courseName": "Cloud Computing",
+                "courseGrade": "A"
+            }
+        ]
+    }
+]

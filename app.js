@@ -1,12 +1,7 @@
 const express = require('express');
-const studentService = require('./lib/studentService')
 let app = express();
-const bodyParser = require('body-parser')
-const mysql = require('mysql')
 const session = require("express-session");
-const { isStudentInDatabase } = require('./lib/studentService');
 
-require('dotenv').config()
 
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
@@ -16,8 +11,17 @@ app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
+// ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
+app.use(express.static(__dirname + '/public'));
+
 // SETTING UP BODY PARSER 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.urlencoded({}))
+
+// database setup
+require("./models/db");
+
+
+
 
 // Set up cookie parser and sessions
 const COOKIE_SECRET = "keyboard cat"; // My secret to secure cookies
@@ -31,14 +35,9 @@ app.use(
 		saveUninitialized: true,
 		cookie: { secure: false },
 	})
-)
+);
 
-// PARSE APPLICATION/JSON
-app.use(bodyParser.json())
-
-// ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
-app.use(express.static(__dirname + '/public'));
-
+const studentService = require('./services/studentService')
 
 
 // DISPLAY LOGIN PROMPT 
@@ -47,10 +46,19 @@ app.get("/login", function (req, res) {
 });
 
 // Handle the login action
-app.post("/login", function (req, res) {
-	req.session.user = req.body.username; // Set the username
+app.post("/login", async function (req, res) {
+	req.session.user = req.body.username;
+	const student = await studentService.isStudentInDatabase(req.body.username, req.body.password)
+	console.log(student)
+	// console.log(req.body.username)
+	// console.log(req.body.password)
 	res.redirect("/Dashboard");
 });
+
+// app.post("/login", function (req, res) {
+// 	req.session.user = req.body.username;
+// 	res.redirect("/Dashboard");
+// });
 
 // Middleware that will enforce logins for all subsequent routes
 app.use(function (req, res, next) {
@@ -67,27 +75,14 @@ app.use(function (req, res, next) {
 	}
 });
 
+// IMPORT THE CONTROLLER(S)
+const studentController = require('./controllers/studentController');
+const { compare } = require('bcrypt');
+
+app.get('/dashboard', studentController.dashboardRoute);
+app.get('/multitask', studentController.multitaskRoute);
 
 
-
-app.get('/:route', function (req, res) {
-	const student = studentService.getClassesByStudent(req.session.user)
-
-
-	if (req.params.route === 'Dashboard') {
-		res.render('dashboard', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	} else if (req.params.route === 'Multitask') {
-		res.render('multitask', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	}
-});
 
 
 app.get('/norecord', function (req, res) {

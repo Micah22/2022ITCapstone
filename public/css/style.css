@@ -111,69 +111,69 @@ center div div h2 {
 
 /* NAVBAR STYLES  */
 .active {
-    background-color: #001d9e;
-    /* background-color: #04AA6D; */
+  background-color: #001d9e;
+  /* background-color: #04AA6D; */
 }
 #navBar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    /* background-color: rgb(0, 82, 204); */
-    /* background-color: rgb(82, 82, 82); */
-    background-image: linear-gradient(to right, rgb(0, 69, 173), rgb(0, 39, 99));
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
-    position: sticky;
-    width: 100%;
-    top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: rgb(0, 82, 204); */
+  /* background-color: rgb(82, 82, 82); */
+  background-image: linear-gradient(to right, rgb(0, 69, 173), rgb(0, 39, 99));
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
 #navLI {
-    float: left;
-    font-size: 20px;
+  float: left;
+  font-size: 20px;
 }
 
 #nav {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* #nav:hover {
-    color: rgb(255, 255, 255);
-    color: black;
+  color: rgb(255, 255, 255);
+  color: black;
 } */
 
 .topnav-right {
-    float: right;
+  float: right;
 }
 
 /* IFRAME AND EMBED STYLES */
 iframe {
-    border: 3px solid black;
+  border: 3px solid black;
 }
 
 /* FOOTER STYLES  */
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    /* background-color: red; */
-    border-top: 1px solid black;
-    color: rgb(0, 0, 0);
-    /* text-align: center; */
-  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: red; */
+  border-top: 1px solid black;
+  color: rgb(0, 0, 0);
+  /* text-align: center; */
+}
 
 
 
 
 /* IFRAME CSS  */
 iframe {
-    width: 100%;
-    height: 600px;
+  width: 100%;
+  height: 600px;
 }
 
 
@@ -182,34 +182,35 @@ iframe {
 
 
 .icon-bar {
-    float: right;
-    width: 70px;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background-color: rgb(63, 63, 63);
-    /* background-color: #555; */
-    /* background-color: rgb(0, 54, 136); */
-    /* background-image: linear-gradient(180deg, rgb(0, 69, 173), rgb(0, 39, 99)); */
-  }
+  float: right;
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: rgb(63, 63, 63);
+  /* background-color: #555; */
+  /* background-color: rgb(0, 54, 136); */
+  /* background-image: linear-gradient(180deg, rgb(0, 69, 173), rgb(0, 39, 99)); */
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px;
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+background-color: #000; /* Add a hover color */
+}
+
+
+
+
   
-  .icon-bar a {
-    display: block; /* Make the links appear below each other instead of side-by-side */
-    text-align: center; /* Center-align text */
-    padding: 16px; /* Add some padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
-    font-size: 36px; /* Increased font-size */
-  }
-  
-  .icon-bar a:hover {
-    background-color: #000; /* Add a hover color */
-  }
-
-
-
-
 
 
 
@@ -221,54 +222,56 @@ iframe {
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
+  height: 40px;
+  width: 500px; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 50px;
+  background-color: rgb(226, 226, 226); 
+  /* background-color: #111; */
+  border: black 1px solid;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
   
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-    margin-right: 40px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+/* The navigation menu links */
+.sidenav a {
+  /* padding: 8px 8px 0px 8px; */
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  margin-right: 40px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 18px;}
+}
 
 
 
@@ -336,82 +339,84 @@ iframe {
 
 /* Tooltip container */
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
-  
+
 /* Tooltip text */
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    top: 25px;
-    right: 105%;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-}
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  top: 25px;
+  right: 105%;
   
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: 100%; /* To the right of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent transparent black;
-  }
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
 
 
 
 
-  /* Style the tab */
+/* Style the tab */
 .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
