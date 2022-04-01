@@ -1,12 +1,7 @@
 const express = require('express');
-const studentService = require('./lib/studentService')
 let app = express();
-const bodyParser = require('body-parser')
-const mysql = require('mysql')
 const session = require("express-session");
-const { isStudentInDatabase } = require('./lib/studentService');
 
-require('dotenv').config()
 
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
@@ -16,8 +11,17 @@ app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
+// ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
+app.use(express.static(__dirname + '/public'));
+
 // SETTING UP BODY PARSER 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.urlencoded({}))
+
+// database setup
+require("./models/db");
+
+
+
 
 // Set up cookie parser and sessions
 const COOKIE_SECRET = "keyboard cat"; // My secret to secure cookies
@@ -33,11 +37,8 @@ app.use(
 	})
 );
 
-// PARSE APPLICATION/JSON
-app.use(bodyParser.json())
 
-// ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
-app.use(express.static(__dirname + '/public'));
+
 
 
 
@@ -67,27 +68,14 @@ app.use(function (req, res, next) {
 	}
 });
 
+// IMPORT THE CONTROLLER(S)
+const studentController = require('./controllers/studentController')
+
+app.get('/', studentController.loginRoute);
+app.get('/dashboard', studentController.dashboardRoute);
+app.get('/multitask', studentController.multitaskRoute);
 
 
-
-app.get('/:route', function (req, res) {
-	const student = studentService.getClassesByStudent(req.session.user)
-
-
-	if (req.params.route === 'Dashboard') {
-		res.render('dashboard', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	} else if (req.params.route === 'Multitask') {
-		res.render('multitask', {
-			route: req.params.route,
-			username: req.session.user,
-			student: student
-		});
-	}
-});
 
 
 app.get('/norecord', function (req, res) {

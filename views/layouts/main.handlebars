@@ -10,13 +10,13 @@
 <body>
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("mySidenav").style.height = "300px";
+            //document.getElementById("main").style.marginLeft = "250px";
         }
 
         function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("mySidenav").style.height = "40px";
+            //document.getElementById("main").style.marginLeft = "0";
         }
 
 
@@ -30,12 +30,114 @@
         function closeOverlay() {
             document.getElementById("rightOverlay").style.width = "0";
         }
+
+
+
+
+
     </script>
 
+
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/login">Log Out</a></li>
+        <table border="1px" width="100%">
+            <tr style="padding:0px" height="10px">
+                <td>
+                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:30px; padding:0px" onclick="openNav()">
+                    Chatroom
+                    </a>
+                </td>
+                <td>
+                    <a href="javascript:void(0)" class="openbtn" style="float: right; padding:0px" onclick="closeNav()">&times;</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">
+                    <pre id="messages"
+                        style="height: 200px; padding:8px; background-color: rgb(255, 255, 255); border: 1px solid black; overflow-x: hidden;"></pre>
+                </td>
+                <td>
+                    <input type="text" id="usernameBox" placeholder="Type your username here"
+                        style="display: block; padding: 10px; " />
+                    <input type="text" id="messageBox" placeholder="Type your message here"
+                        style="display: block; padding: 10px; height:100px; " />
+                    <button id="send" title="Send Message!" style="height: 100%;">Send Message</button>
+                </td>
+
+            </tr>
+        </table>
+
+
     </div>
+
+    <script>
+        var input = document.getElementById("messageBox");
+
+
+
+
+
+        input.addEventListener("keyup", function (event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("send").click();
+            }
+        });
+        (function () {
+            const sendBtn = document.querySelector('#send');
+            const messages = document.querySelector('#messages');
+            const messageBox = document.querySelector('#messageBox');
+            const usernameBox = document.querySelector('#usernameBox');
+
+            let ws;
+
+            function showMessage(message, username) {
+                messages.textContent += `\n\n${username}:${message}`;
+                messages.scrollTop = messages.scrollHeight;
+                messageBox.value = '';
+                usernameBox.value = '';
+            }
+            function init() {
+                if (ws) {
+                    ws.onerror = ws.onopen = ws.onclose = null;
+                    ws.close();
+                }
+
+                ws = new WebSocket('ws://localhost:4000');
+                ws.onopen = () => {
+                    console.log('Connection opened!');
+                }
+                ws.onmessage = ({ data }) => showMessage(data);
+                ws.onclose = function () {
+                    ws = null;
+                }
+            }
+
+            sendBtn.onclick = function () {
+                if (!ws) {
+                    showMessage("No WebSocket connection :(");
+                    return;
+                }
+
+                //const usernameBox = getElementById('usernameBox').value || '???'
+                //const messageBox = getElementById('messageBox').value || '???'
+
+                //ws.send(messageBox.value);
+                ws.send(usernameBox.value);
+                //ws.send(`${usernameBox}: ${getElement('messageBox').value}`);
+                showMessage(messageBox.value, usernameBox.value);
+            }
+
+            init();
+        })();
+
+
+
+    </script>
+
 
     <div id="main">
 
@@ -45,6 +147,7 @@
             <li id="navLI"><a id="nav" href="#" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
             <div class="topnav-right">
                 <li id="navLI"><a id="nav" href="/login">Log Out</a></li>
+
             </div>
 
         </ul>

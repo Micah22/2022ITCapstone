@@ -1,63 +1,28 @@
 {{!-- <h1>Dashboard</h1> --}}
 
 
-<h1>Welcome {{username}}!</h1>
+    {{#each student}}
+<h1>Welcome {{name}}!</h1>
 <hr>
-{{#each student}}
 
 
 <div id="dash">
+    {{#each classes}}
     <div class="card">
-        <a href="/{{classes.one}}">
+        <a href="/{{courseCode}}">
             <div class="container">
-                <h2>{{classes.one}}</h2>
+                <h2>{{courseName}} - {{courseCode}}</h2>
             </div>
             <img src="images/class.jpg" class="classImg">
         </a>
     </div>
-
-    <div class="card">
-        <a href="/{{classes.two}}">
-            <div class="container">
-                <h2>{{classes.two}}</h2>
-            </div>
-            <img src="images/class.jpg" class="classImg">
-        </a>
-    </div>
-    {{#if classes.three}}
-    <div class="card">
-        <a href="/{{classes.three}}">
-            <div class="container">
-                <h2>{{classes.three}}</h2>
-            </div>
-            <img src="images/class.jpg" class="classImg">
-        </a>
-    </div>
-    {{/if}}
-    {{#if classes.four}}
-    <div class="card">
-        <a href="/{{classes.four}}">
-            <div class="container">
-                <h2>{{classes.four}}</h2>
-            </div>
-            <img src="images/class.jpg" class="classImg">
-        </a>
-    </div>
-
-    {{/if}}
-    {{#if classes.five}}
-    <div class="card">
-        <a href="/{{classes.five}}">
-            <div class="container">
-                <h2>{{classes.five}}</h2>
-            </div>
-            <img src="images/class.jpg" class="classImg">
-        </a>
-    </div>
-
-    {{/if}}
+    {{/each}}
 </div>
-{{/each}}
+    {{/each}}
+
+
+
+
 <center>
     <div id="right-bar">
         <div id="to-do">
@@ -122,9 +87,7 @@
                     {Body}
                 </div>
             </div>
-            
+
         </div>
     </div>
 </center>
-
-

@@ -4,7 +4,8 @@
   "description": "This is a simple app to get you started. Change the description as needed.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Your Name Here",
   "license": "ISC",
@@ -15,6 +16,9 @@
     "express": "^4.17.3",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
-    "mysql": "^2.18.1"
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.2.9",
+    "mysql": "^2.18.1",
+    "ws": "^8.5.0"
   }
 }
