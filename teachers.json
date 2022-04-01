@@ -1,0 +1,18 @@
+[
+    {
+        "teacherId": 233067,
+        "name": "Tony",
+        "username": "tah22",
+        "password": "zN3FTm",
+        "classes": [
+            {
+                "courseCode": "COP3813",
+                "courseName": "Server-Side Programming",
+            },
+            {
+                "courseCode": "CTS4911",
+                "courseName": "Information Technology Capstone",
+            }
+        ]
+    }
+]
