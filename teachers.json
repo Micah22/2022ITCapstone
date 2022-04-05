@@ -7,11 +7,11 @@
         "classes": [
             {
                 "courseCode": "COP3813",
-                "courseName": "Server-Side Programming",
+                "courseName": "Server-Side Programming"
             },
             {
                 "courseCode": "CTS4911",
-                "courseName": "Information Technology Capstone",
+                "courseName": "Information Technology Capstone"
             }
         ]
     }

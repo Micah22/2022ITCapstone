@@ -4,8 +4,6 @@ const mongoose = require("mongoose");
 const studentSchema = mongoose.Schema({
   studentId: [Number],
   name: String,
-  username: String,
-  password: String,
   year: String,
   classes: [{ courseCode: String, courseName: String, courseGrade: String }],
 });
