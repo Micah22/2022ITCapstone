@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // Define the schema
 const studentSchema = mongoose.Schema({
   studentId: [Number],
-  login: [{username: String, password: String}],
+  username: String,
   name: String,
   year: String,
   classes: [{ courseCode: String, courseName: String, courseGrade: String }],

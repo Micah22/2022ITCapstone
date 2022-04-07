@@ -1,19 +1,21 @@
 const mongoose = require("mongoose");
-require("../models/student");
+require("../models/studentDB");
+require("../models/secureDB");
 const Student = mongoose.model("Student")
+const Secure = mongoose.model("Secure")
 
 const studentService = {
-    getClassesByStudent: async (username, password) => {
-        // return Student.find({ studendentId: user }).lean()
-
-        return Student.find({
+    isStudentInDatabase: async (userUsername, userPassword) => {
+        return Secure.find({
             $and: [
-                // { studentId: Number(input) },
-                // { name: input },
-                { 'login.username': username },
-                { 'login.password': password }
+                { username: userUsername },
+                { password: userPassword }
             ],
         }).lean()
+
+    },
+    getClassesByStudentId: async (Username) => {
+        return Student.find({ username: Username }).lean()
     }
 
 }

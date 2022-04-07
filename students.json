@@ -1,12 +1,7 @@
 [
     {
         "studentId": 233067,
-        "login": [
-            {
-                "username": "mkb57",
-                "password": "zN3FTm"
-            }
-        ],
+        "username": "mkb57",
         "name": "Micah",
         "year": "Senior",
         "classes": [
@@ -29,12 +24,7 @@
     },
     {
         "studentId": 233068,
-        "login": [
-            {
-                "username": "drj35",
-                "password": "asK1m9"
-            }
-        ],
+        "username": "drj35",
         "name": "Derek",
         "year": "Senior",
         "classes": [
@@ -62,12 +52,7 @@
     },
     {
         "studentId": 231643,
-        "login": [
-            {
-                "username": "jbb70",
-                "password": "d6mk9a"
-            }
-        ],
+        "username": "jbb70",
         "name": "James",
         "year": "Junior",
         "classes": [
@@ -100,12 +85,7 @@
     },
     {
         "studentId": 20419,
-        "login": [
-            {
-                "username": "bsa13",
-                "password": "U4dkY9"
-            }
-        ],
+        "username": "bsa13",
         "name": "Bruno",
         "year": "Senior",
         "classes": [
@@ -133,12 +113,7 @@
     },
     {
         "studentId": 26827,
-        "login": [
-            {
-                "username": "sej46",
-                "password": "H9IQvc"
-            }
-        ],
+        "username": "sej46",
         "name": "Sarah",
         "year": "Senior",
         "classes": [
