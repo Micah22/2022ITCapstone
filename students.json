@@ -1,9 +1,13 @@
 [
     {
         "studentId": 233067,
+        "login": [
+            {
+                "username": "mkb57",
+                "password": "zN3FTm"
+            }
+        ],
         "name": "Micah",
-        "username": "mkb57",
-        "password": "zN3FTm",
         "year": "Senior",
         "classes": [
             {
@@ -25,9 +29,13 @@
     },
     {
         "studentId": 233068,
+        "login": [
+            {
+                "username": "drj35",
+                "password": "asK1m9"
+            }
+        ],
         "name": "Derek",
-        "username": "drj35",
-        "password": "asK1m9",
         "year": "Senior",
         "classes": [
             {
@@ -54,9 +62,13 @@
     },
     {
         "studentId": 231643,
+        "login": [
+            {
+                "username": "jbb70",
+                "password": "d6mk9a"
+            }
+        ],
         "name": "James",
-        "username": "jbb70",
-        "password": "d6mk9a",
         "year": "Junior",
         "classes": [
             {
@@ -88,9 +100,13 @@
     },
     {
         "studentId": 20419,
+        "login": [
+            {
+                "username": "bsa13",
+                "password": "U4dkY9"
+            }
+        ],
         "name": "Bruno",
-        "username": "bsa13",
-        "password": "U4dkY9",
         "year": "Senior",
         "classes": [
             {
@@ -117,9 +133,13 @@
     },
     {
         "studentId": 26827,
+        "login": [
+            {
+                "username": "sej46",
+                "password": "H9IQvc"
+            }
+        ],
         "name": "Sarah",
-        "username": "sej46",
-        "password": "H9IQvc",
         "year": "Senior",
         "classes": [
             {

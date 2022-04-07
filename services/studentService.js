@@ -3,13 +3,17 @@ require("../models/student");
 const Student = mongoose.model("Student")
 
 const studentService = {
-    isStudentInDatabase: async (username, password) => {
-        // return Student.find({username: username}).lean()
-        return Student.find( { username: username } && {password:password})
+    getClassesByStudent: async (username, password) => {
+        // return Student.find({ studendentId: user }).lean()
 
-    },
-    getClassesByStudent: async (username) => {
-        return Student.find({ username: username }).lean()
+        return Student.find({
+            $and: [
+                // { studentId: Number(input) },
+                // { name: input },
+                { 'login.username': username },
+                { 'login.password': password }
+            ],
+        }).lean()
     }
 
 }

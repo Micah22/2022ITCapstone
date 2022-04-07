@@ -3,9 +3,8 @@ const mongoose = require("mongoose");
 // Define the schema
 const studentSchema = mongoose.Schema({
   studentId: [Number],
+  login: [{username: String, password: String}],
   name: String,
-  username: String,
-  password: String,
   year: String,
   classes: [{ courseCode: String, courseName: String, courseGrade: String }],
 });
