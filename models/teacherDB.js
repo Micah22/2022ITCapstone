@@ -5,7 +5,6 @@ const teacherSchema = mongoose.Schema({
   teacherId: [Number],
   name: String,
   username: String,
-  password: String,
   classes: [{ courseCode: String, courseName: String}],
 });
 
