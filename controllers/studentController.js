@@ -17,7 +17,7 @@ const studentController = {
             } else {
                 const valid = await studentService.getTeacherClassesByUsername(req.session.user)
                 console.log(valid)
-                res.render('dashboard', {
+                res.render('teacherDashboard', {
                     route: req.params.route,
                     username: req.session.user,
                     student: valid

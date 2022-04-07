@@ -1,0 +1,93 @@
+
+
+
+    {{#each student}}
+<h1>Welcome {{name}}!</h1>
+<hr>
+
+
+<div id="dash">
+    {{#each classes}}
+    <div class="card">
+        <a href="/{{courseCode}}">
+            <div class="container">
+                <h2>{{courseName}} - {{courseCode}}</h2>
+            </div>
+            <img src="images/class.jpg" class="classImg">
+        </a>
+    </div>
+    {{/each}}
+</div>
+    {{/each}}
+
+
+
+
+<center>
+    <div id="right-bar">
+        <div id="to-do">
+            <h2>To-Do</h2>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>Midterms graded</strong>
+                </div>
+                <div id="notifBody">
+                    Mar 14 at 9:40pm
+                </div>
+            </div>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Header}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Header}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+        </div>
+        <div id="recent">
+            <h2>Feedback/Notifs</h2>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>Module 3 - Assignment</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>Data Visualization - CTS4457</strong>
+                </div>
+                <div id="notifBody">
+                    "Looks good!"
+                </div>
+            </div>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Assignment}</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>{Class}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+            <div id="notif">
+                <div id="notifHeader">
+                    <strong>{Assignment}</strong>
+                </div>
+                <div id="notifClass">
+                    <strong>{Class}</strong>
+                </div>
+                <div id="notifBody">
+                    {Body}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</center>
