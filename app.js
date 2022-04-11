@@ -74,10 +74,6 @@ app.get("/login", function (req, res) {
 app.post("/login", async function (req, res) {
 	req.session.user = req.body.username;
 	password = req.body.password;
-	// const student = await studentService.isStudentInDatabase(req.body.username, req.body.password)
-	// console.log(student)
-	// console.log(req.body.username)
-	// console.log(req.body.password)
 	res.redirect("/dashboard");
 });
 
@@ -107,6 +103,7 @@ const studentController = require('./controllers/studentController');
 
 app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
+app.get('/:courseCode', studentController.classRoute);
 
 
 

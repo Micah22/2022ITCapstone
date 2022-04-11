@@ -30,6 +30,17 @@ const studentController = {
             })
         }
     },
+    classRoute: function (req, res) {
+        courses = ['COP3813', 'CTS4457', 'CTS4911']
+        if (courses.includes(req.params.courseCode)) {
+            // res.render('class')
+            res.render('class', {
+                route: req.params.route,
+                username: req.session.user
+            })
+
+        }
+    },
     multitaskRoute: function (req, res) {
         res.render('multitask')
     }
