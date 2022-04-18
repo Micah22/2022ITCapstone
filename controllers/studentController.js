@@ -31,7 +31,12 @@ const studentController = {
         }
     },
     classRoute: function (req, res) {
-        courses = ['COP3813', 'CTS4457', 'CTS4911']
+        courses = [
+            'COP3813', 'CTS4457', 'CTS4911',
+            'STA2023', 'COP2253', 'CGS2570',
+            'COP2830', 'CET4772', 'MAC1140',
+            'CGS3763'
+        ]
         if (courses.includes(req.params.courseCode)) {
             // res.render('class')
             res.render('class', {

@@ -21,34 +21,29 @@
         evt.currentTarget.className += " active";
     }
 </script>
-{{!-- <iframe src="" name="myFrame"></iframe> --}}
-{{!-- <p><a href="https://my.uwf.edu/" target="myFrame">Open Canvas</a></p>
-<p><a href="https://www.github.com" target="myFrame">Open GitHub.com</a></p>
-<p><a href="https://www.amazon.com" target="myFrame">Open Amazon.com</a></p> --}}
 
 
 
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Google Drive')">Google Drive</button>
+    <button class="tablinks" onclick="openCity(event, 'Google Drive')">Google Docs</button>
     <button class="tablinks" onclick="openCity(event, 'Discord')">Discord</button>
     <button class="tablinks" onclick="openCity(event, 'Quizlet')">Quizlet</button>
 </div>
 
 <!-- Tab content -->
 <div id="Google Drive" class="tabcontent">
-    <h3>Google Drive</h3>
-    <iframe src="" name="myFrame"></iframe>
-    {{!-- <iframe src="www.google.com" name="myFrame"></iframe> --}}
+    {{!-- <h3>Google Drive</h3> --}}
+    <iframe src="https://docs.google.com/document/d/1YEqiFf3vO5gKwkd927OhkoKxIY7pxa53Le9WwCLTmeg/edit?usp=sharing" name="myFrame"></iframe>
+    {{!-- <img src="images/docs.png"width="100%" /> --}}
 </div>
 
 <div id="Discord" class="tabcontent">
-    <h3>Discord</h3>
-    <iframe src="" name="myFrame"></iframe>
-    {{!-- <iframe src="www.discord.com" name="myFrame"></iframe> --}}
+    {{!-- <h3>Discord</h3> --}}
+    <img src="images/discord.jpg" height="700px" width="75%" />
 </div>
 
 <div id="Quizlet" class="tabcontent">
-    <h3>Quizlet</h3>
-    <iframe src="" name="myFrame"></iframe>
-    {{!-- <iframe src="www.quizlet.com" name="myFrame"></iframe> --}}
+    {{!-- <h3>Quizlet</h3> --}}
+    <img src="images/quizlet.png" height="700px" width="75%" />
+    {{!-- <iframe src="" name="myFrame"></iframe> --}}
 </div>
