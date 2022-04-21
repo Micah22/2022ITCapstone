@@ -2,7 +2,7 @@ const express = require('express');
 let app = express();
 const session = require("express-session");
 
-// WEBSOCKET STUFF 
+// WEBSOCKET SETUP 
 const http = require('http');
 const WebSocket = require('ws');
 const port = 4000;
@@ -78,10 +78,6 @@ app.post("/login", async function (req, res) {
 	res.redirect("/dashboard");
 });
 
-// app.post("/login", function (req, res) {
-// 	req.session.user = req.body.username;
-// 	res.redirect("/Dashboard");
-// });
 
 // Middleware that will enforce logins for all subsequent routes
 app.use(function (req, res, next) {
@@ -105,17 +101,6 @@ const studentController = require('./controllers/studentController');
 app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
 app.get('/:courseCode', studentController.classRoute);
-
-
-
-
-app.get('/norecord', function (req, res) {
-	res.render('norecord')
-})
-
-
-
-
 
 
 // 404 catch-all handler (middleware)
