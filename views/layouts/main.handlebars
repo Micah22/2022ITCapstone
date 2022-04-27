@@ -76,10 +76,6 @@
     <script>
         var input = document.getElementById("messageBox");
 
-
-
-
-
         input.addEventListener("keyup", function (event) {
             // Number 13 is the "Enter" key on the keyboard
             if (event.keyCode === 13) {
@@ -127,7 +123,6 @@
 
                 //const usernameBox = getElementById('usernameBox').value || '???'
                 //const messageBox = getElementById('messageBox').value || '???'
-
                 //ws.send(messageBox.value);
                 ws.send(usernameBox.value);
                 //ws.send(`${usernameBox}: ${getElement('messageBox').value}`);
