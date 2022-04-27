@@ -44,10 +44,21 @@ const studentController = {
                 username: req.session.user
             })
 
+        } else {
+            res.render('class', {
+                route: req.params.route,
+                username: req.session.user
+            })
         }
     },
     multitaskRoute: function (req, res) {
         res.render('multitask')
+    },
+    zoomRoute: function (req, res) {
+        res.render('zoom')
+    },
+    filesRoute: function (req, res) {
+        res.render('files')
     }
 }
 

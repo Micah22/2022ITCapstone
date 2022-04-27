@@ -1,49 +1,154 @@
 {{!-- <h1>Collaboration Area</h1> --}}
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-    function openCity(evt, cityName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
-
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
+    function viewOne() {
+        document.getElementById("frame1").style.width = "92%";
+        document.getElementById("frame2").style.width = "30%";
+        document.getElementById("frame3").style.width = "30%";
+        document.getElementById("frame4").style.width = "30%";
     }
+    function viewFour() {
+        document.getElementById("frame1").style.width = "30%";
+        document.getElementById("frame2").style.width = "30%";
+        document.getElementById("frame3").style.width = "30%";
+        document.getElementById("frame4").style.width = "92%";
+    }
+
+    function viewTwo() {
+        document.getElementById("frame1").style.width = "30%";
+        document.getElementById("frame2").style.width = "60%";
+        document.getElementById("frame3").style.width = "30%";
+        document.getElementById("frame4").style.width = "60%";
+    }
+
+    function viewThree() {
+        document.getElementById("frame1").style.width = "60%";
+        document.getElementById("frame2").style.width = "30%";
+        document.getElementById("frame3").style.width = "60%";
+        document.getElementById("frame4").style.width = "30%";
+    }
+
+    function backPage() {
+        window.history.back();
+    }
+    function reloadPage() {
+        window.location.reload();
+    }
+    function forwardPage() {
+        window.history.forward();
+    }
+
+    function myFunction(text) {
+        navigator.clipboard.writeText(text);
+    }
+
+    function expandFrame(ID) {
+        document.getElementById(ID).style.width = "60%";
+    }
+    function strinkFrame(ID) {
+        document.getElementById(ID).style.width = "30%";
+    }
+    function largeFrame(ID) {
+        document.getElementById(ID).style.width = "90%";
+    }
+    function iframeURL(ID, NAME) {
+        var site = $(ID).val();
+        var iframe = document.getElementById(NAME);
+        iframe.src = site;
+        iframe.src = iframe.src;
+    }
+
 </script>
-
-
-
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Google Drive')">Google Docs</button>
-    <button class="tablinks" onclick="openCity(event, 'Discord')">Discord</button>
-    <button class="tablinks" onclick="openCity(event, 'Quizlet')">Quizlet</button>
+    <button class="tablinks" onclick="viewOne()">View 1</button>
+    <button class="tablinks" onclick="viewTwo()">View 2</button>
+    <button class="tablinks" onclick="viewThree()">View 3</button>
+    <button class="tablinks" onclick="viewFour()">View 4</button>
+    <input id="myInput" type="submit" value="http://www.lipsum.com/" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://www.google.com/search?igu=1" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://www.yelp.com/" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://en.wikipedia.org/wiki/Main_Page" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://www.desmos.com/calculator" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://www.wordhippo.com/" onclick="myFunction(this.value)">
 </div>
 
-<!-- Tab content -->
-<div id="Google Drive" class="tabcontent">
-    {{!-- <h3>Google Drive</h3> --}}
-    <iframe src="https://docs.google.com/document/d/1YEqiFf3vO5gKwkd927OhkoKxIY7pxa53Le9WwCLTmeg/edit?usp=sharing" name="myFrame"></iframe>
-    {{!-- <img src="images/docs.png"width="100%" /> --}}
+<br>
+<div class="frame-container" style="width: 30%;" id="frame1">
+    <div class="frame-header">
+        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe1">
+            <input type="button" value="HOME">
+        </a>
+        <input class="URLs" id="URL1" type="search">
+        <input class="iframe-button" type="button" onClick="iframeURL('#URL1', 'iframe1')" value="GO">
+        <button class="iframe-button" onclick="backPage()">Back</button>
+        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        &emsp;
+        <button class="iframe-button" id="frame1" onclick="strinkFrame(this.id)">30%</button>
+        <button class="iframe-button" id="frame1" onclick="expandFrame(this.id)">60%</button>
+        <button class="iframe-button" id="frame1" onclick="largeFrame(this.id)">90%</button>
+    </div>
+    <iframe src="https://www.google.com/search?igu=1" class="frames" name="iframe1" id="iframe1"></iframe>
+</div>
+<div class="frame-container" id="frame2">
+    <div class="frame-header">
+        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe2">
+            <input type="button" value="HOME">
+        </a>
+        <input class="URLs" id="URL2" type="search">
+        <input class="iframe-button" type="button" onClick="iframeURL('#URL2', 'iframe2')" value="GO">
+        <button class="iframe-button" onclick="backPage()">Back</button>
+        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        &emsp;
+        <button class="iframe-button" id="frame2" onclick="strinkFrame(this.id)">30%</button>
+        <button class="iframe-button" id="frame2" onclick="expandFrame(this.id)">60%</button>
+        <button class="iframe-button" id="frame2" onclick="largeFrame(this.id)">90%</button>
+    </div>
+    <iframe src="https://en.wikipedia.org/wiki/Main_Page" class="frames" name="iframe2" id="iframe2"></iframe>
+</div>
+<div class="frame-container" id="frame3">
+    <div class="frame-header">
+        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe3">
+            <input type="button" value="HOME">
+        </a>
+        <input class="URLs" id="URL3" type="search">
+        <input class="iframe-button" type="button" onClick="iframeURL('#URL3', 'iframe3')" value="GO">
+        <button class="iframe-button" onclick="backPage()">Back</button>
+        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        &emsp;
+        <button class="iframe-button" id="frame3" onclick="strinkFrame(this.id)">30%</button>
+        <button class="iframe-button" id="frame3" onclick="expandFrame(this.id)">60%</button>
+        <button class="iframe-button" id="frame3" onclick="largeFrame(this.id)">90%</button>
+    </div>
+    <iframe src="https://www.desmos.com/calculator" class="frames" name="iframe3" id="iframe3"></iframe>
+</div>
+<div class="frame-container" id="frame4">
+    <div class="frame-header">
+        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe4">
+            <input type="button" value="HOME">
+        </a>
+        <input class="URLs" id="URL4" type="search">
+        <input class="iframe-button" type="button" onClick="iframeURL('#URL4', 'iframe4')" value="GO">
+        <button class="iframe-button" onclick="backPage()">Back</button>
+        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        &emsp;
+        <button class="iframe-button" id="frame4" onclick="strinkFrame(this.id)">30%</button>
+        <button class="iframe-button" id="frame4" onclick="expandFrame(this.id)">60%</button>
+        <button class="iframe-button" id="frame4" onclick="largeFrame(this.id)">90%</button>
+    </div>
+    <iframe src="https://www.wordhippo.com/" class="frames" name="iframe4" id="iframe4"></iframe>
 </div>
 
-<div id="Discord" class="tabcontent">
-    {{!-- <h3>Discord</h3> --}}
-    <img src="images/discord.jpg" height="700px" width="75%" />
-</div>
 
-<div id="Quizlet" class="tabcontent">
-    {{!-- <h3>Quizlet</h3> --}}
-    <img src="images/quizlet.png" height="700px" width="75%" />
-    {{!-- <iframe src="" name="myFrame"></iframe> --}}
-</div>
+
+
+
+
+
+
+
+{{!-- <form action="http://www.google.com/search" method="get">
+    <input type="hidden" name="q" value="site:http://example.com">
+    <input type="text" name="q" alt="search">
+    <input type="submit" value="Search">
+</form> --}}

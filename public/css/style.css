@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(241, 241, 241);
-    /* width:90%; */
-    /* margin-left: 170px; */
+  background-color: rgb(241, 241, 241);
+  /* width:90%; */
+  /* margin-left: 170px; */
 }
 
 h1 {
@@ -20,42 +20,43 @@ h1 {
   float: left;
   background-color: rgb(70, 70, 70);
   /* background-color: rgb(2, 0, 141); */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
+
 div a div h2 {
   font-size: 1rem;
-    
+
 }
 
 .card:hover {
-/* .container:hover { */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
-    /* width: 300px; */
+  /* .container:hover { */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+  /* width: 300px; */
 }
 
 .card a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .container {
-    padding: 12px 8px 0px;
-    /* padding: 2px 16px; */
-    height: 70px;
-    background-color: rgb(160, 190, 247);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 12px 8px 0px;
+  /* padding: 2px 16px; */
+  height: 70px;
+  background-color: rgb(160, 190, 247);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .classImg {
-    width: 100%;
-    /* height: 146px; */
+  width: 100%;
+  /* height: 146px; */
 }
 
 #dash {
-    float: left;
-    height: 100%;
-    width: 80%;
-    /* background-color: rgb(241, 112, 241); */
+  float: left;
+  height: 100%;
+  width: 80%;
+  /* background-color: rgb(241, 112, 241); */
 }
 
 
@@ -63,6 +64,7 @@ div a div h2 {
 center div div h2 {
   border-bottom: 1px solid black;
 }
+
 #right-bar {
   float: right;
   width: 15%;
@@ -72,7 +74,7 @@ center div div h2 {
   /* right: 0; */
   height: 100%;
   border-left: 1px solid black;
-  box-shadow: 4px 8px 8px 0 rgba(0,0,0,0.8);
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
 }
 
 #to-do {
@@ -114,6 +116,7 @@ center div div h2 {
   background-color: #001d9e;
   /* background-color: #04AA6D; */
 }
+
 #navBar {
   list-style-type: none;
   margin: 0;
@@ -122,7 +125,7 @@ center div div h2 {
   /* background-color: rgb(0, 82, 204); */
   /* background-color: rgb(82, 82, 82); */
   background-image: linear-gradient(to right, rgb(0, 69, 173), rgb(0, 39, 99));
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
   position: sticky;
   width: 100%;
   top: 0;
@@ -150,10 +153,7 @@ center div div h2 {
   float: right;
 }
 
-/* IFRAME AND EMBED STYLES */
-iframe {
-  border: 3px solid black;
-}
+
 
 /* FOOTER STYLES  */
 .footer {
@@ -171,15 +171,41 @@ iframe {
 
 
 /* IFRAME CSS  */
-iframe {
+.frames {
   width: 100%;
   height: 600px;
+  border: 1px solid black;
+  transition: 1s;
+  /* left: 0; */
+}
+
+.frame-container {
+  width: 30%;
+  border: 2px solid black;
+  transition: 1s;
+  background-color: rgb(215, 215, 215);
+  float: left;
+  padding-left: 5px;
+  padding-right: 10px;
+  /* margin-right: 10px; */
+}
+
+.URLs {
+  width: 30%;
 }
 
 
+.frame-header {
+  opacity: 5%;
+  transition: .5s;
+}
+.frame-container:hover .frame-header {
+  opacity: 100%;
+}
 
-
-
+.frame-container {
+  position: relative;
+}
 
 .icon-bar {
   float: right;
@@ -195,22 +221,28 @@ iframe {
 }
 
 .icon-bar a {
-  display: block; /* Make the links appear below each other instead of side-by-side */
-  text-align: center; /* Center-align text */
+  display: block;
+  /* Make the links appear below each other instead of side-by-side */
+  text-align: center;
+  /* Center-align text */
   padding: 16px;
-  transition: all 0.3s ease; /* Add transition for hover effects */
-  color: white; /* White text color */
-  font-size: 36px; /* Increased font-size */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+  color: white;
+  /* White text color */
+  font-size: 36px;
+  /* Increased font-size */
 }
 
 .icon-bar a:hover {
-background-color: #000; /* Add a hover color */
+  background-color: #000;
+  /* Add a hover color */
 }
 
 
 
 
-  
+
 
 
 
@@ -223,19 +255,21 @@ background-color: #000; /* Add a hover color */
 /* The side navigation menu */
 .sidenav {
   height: 40px;
-  width: 500px; /* 0 width - change this with JavaScript */
+  width: 500px;
+  /* 0 width - change this with JavaScript */
   position: fixed;
   z-index: 1;
   bottom: 0;
   left: 50px;
-  background-color: rgb(226, 226, 226); 
+  background-color: rgb(226, 226, 226);
   /* background-color: #111; */
   border: black 1px solid;
   overflow: hidden;
   padding: 0px 0px 0px 0px;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
-  
+
 /* The navigation menu links */
 .sidenav a {
   /* padding: 8px 8px 0px 8px; */
@@ -269,8 +303,13 @@ background-color: #000; /* Add a hover color */
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 0px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 0px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 
@@ -285,17 +324,25 @@ background-color: #000; /* Add a hover color */
 
 /* RIGHT OVERLAY MENU */
 .rightOverlay {
-  height: 100%; /* 100% Full-height */
-  width: 0px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 100%;
+  /* 100% Full-height */
+  width: 0px;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
   top: 0;
   right: 70px;
-  background-color: rgb(241, 241, 241);;
-  box-shadow: 0 4px 28px 0 rgba(0,0,0,0.8);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: rgb(241, 241, 241);
+  ;
+  box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The OVERLAY menu links */
@@ -317,6 +364,7 @@ background-color: #000; /* Add a hover color */
   display: block;
   transition: 0.3s;
 }
+
 /* When you mouse over the OVERLAY links, change their color */
 .rightOverlay a:hover {
   color: #001aff;
@@ -341,7 +389,8 @@ background-color: #000; /* Add a hover color */
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -357,7 +406,7 @@ background-color: #000; /* Add a hover color */
   transition: opacity 0.5s;
   top: 25px;
   right: 105%;
-  
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -373,7 +422,8 @@ background-color: #000; /* Add a hover color */
   content: " ";
   position: absolute;
   top: 50%;
-  left: 100%; /* To the right of the tooltip */
+  left: 100%;
+  /* To the right of the tooltip */
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
@@ -410,13 +460,3 @@ background-color: #000; /* Add a hover color */
 .tab button.active {
   background-color: #ccc;
 }
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-

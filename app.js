@@ -2,6 +2,9 @@ const express = require('express');
 let app = express();
 const session = require("express-session");
 
+
+
+
 // WEBSOCKET STUFF 
 const http = require('http');
 const WebSocket = require('ws');
@@ -21,13 +24,6 @@ wss.on('connection', function connection(ws) {
 server.listen(port, function () {
 	console.log(`Server is listening on ${port}!`)
 })
-
-
-
-
-
-
-
 
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
@@ -63,9 +59,6 @@ app.use(
 	})
 );
 
-const studentService = require('./services/studentService')
-
-
 // DISPLAY LOGIN PROMPT 
 app.get("/login", function (req, res) {
 	res.render("login", { layout: 'login' });
@@ -77,11 +70,6 @@ app.post("/login", async function (req, res) {
 	password = req.body.password;
 	res.redirect("/dashboard");
 });
-
-// app.post("/login", function (req, res) {
-// 	req.session.user = req.body.username;
-// 	res.redirect("/Dashboard");
-// });
 
 // Middleware that will enforce logins for all subsequent routes
 app.use(function (req, res, next) {
@@ -104,18 +92,9 @@ const studentController = require('./controllers/studentController');
 
 app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
+app.get('/zoom', studentController.zoomRoute);
+app.get('/files', studentController.filesRoute);
 app.get('/:courseCode', studentController.classRoute);
-
-
-
-
-app.get('/norecord', function (req, res) {
-	res.render('norecord')
-})
-
-
-
-
 
 
 // 404 catch-all handler (middleware)
