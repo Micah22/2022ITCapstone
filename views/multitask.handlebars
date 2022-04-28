@@ -75,72 +75,73 @@
 
 <br>
 <div class="frame-container" style="width: 30%;" id="frame1">
-    <div class="frame-header">
-        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe1">
+    <div id="test1" class="frame-header">
+        {{!-- <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe1">
             <input type="button" value="HOME">
-        </a>
+        </a> --}}
         <input class="URLs" id="URL1" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL1', 'iframe1')" value="GO">
         <button class="iframe-button" onclick="backPage()">Back</button>
         <button class="iframe-button" onclick="forwardPage()">Forward</button>
-        &emsp;
-        <button class="iframe-button" id="frame1" onclick="strinkFrame(this.id)">30%</button>
-        <button class="iframe-button" id="frame1" onclick="expandFrame(this.id)">60%</button>
-        <button class="iframe-button" id="frame1" onclick="largeFrame(this.id)">90%</button>
+        {{!-- &emsp; --}}
+        <div class="frame-size-buttons">
+
+            <button class="iframe-button" id="frame1" onclick="strinkFrame(this.id)">30%</button>
+            <button class="iframe-button" id="frame1" onclick="expandFrame(this.id)">60%</button>
+            <button class="iframe-button" id="frame1" onclick="largeFrame(this.id)">90%</button>
+        </div>
     </div>
     <iframe src="https://www.google.com/search?igu=1" class="frames" name="iframe1" id="iframe1"></iframe>
 </div>
 <div class="frame-container" id="frame2">
-    <div class="frame-header">
-        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe2">
-            <input type="button" value="HOME">
-        </a>
+    <div id="test2" class="frame-header">
         <input class="URLs" id="URL2" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL2', 'iframe2')" value="GO">
         <button class="iframe-button" onclick="backPage()">Back</button>
         <button class="iframe-button" onclick="forwardPage()">Forward</button>
-        &emsp;
-        <button class="iframe-button" id="frame2" onclick="strinkFrame(this.id)">30%</button>
-        <button class="iframe-button" id="frame2" onclick="expandFrame(this.id)">60%</button>
-        <button class="iframe-button" id="frame2" onclick="largeFrame(this.id)">90%</button>
+        <div class="frame-size-buttons">
+
+            <button class="iframe-button" id="frame2" onclick="strinkFrame(this.id)">30%</button>
+            <button class="iframe-button" id="frame2" onclick="expandFrame(this.id)">60%</button>
+            <button class="iframe-button" id="frame2" onclick="largeFrame(this.id)">90%</button>
+        </div>
     </div>
     <iframe src="https://en.wikipedia.org/wiki/Main_Page" class="frames" name="iframe2" id="iframe2"></iframe>
 </div>
 <div class="frame-container" id="frame3">
-    <div class="frame-header">
-        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe3">
-            <input type="button" value="HOME">
-        </a>
+    <div id="test3" class="frame-header">
         <input class="URLs" id="URL3" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL3', 'iframe3')" value="GO">
         <button class="iframe-button" onclick="backPage()">Back</button>
         <button class="iframe-button" onclick="forwardPage()">Forward</button>
         &emsp;
-        <button class="iframe-button" id="frame3" onclick="strinkFrame(this.id)">30%</button>
-        <button class="iframe-button" id="frame3" onclick="expandFrame(this.id)">60%</button>
-        <button class="iframe-button" id="frame3" onclick="largeFrame(this.id)">90%</button>
+        <div class="frame-size-buttons">
+
+            <button class="iframe-button" id="frame3" onclick="strinkFrame(this.id)">30%</button>
+            <button class="iframe-button" id="frame3" onclick="expandFrame(this.id)">60%</button>
+            <button class="iframe-button" id="frame3" onclick="largeFrame(this.id)">90%</button>
+        </div>
     </div>
     <iframe src="https://www.desmos.com/calculator" class="frames" name="iframe3" id="iframe3"></iframe>
 </div>
 <div class="frame-container" id="frame4">
-    <div class="frame-header">
-        <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe4">
-            <input type="button" value="HOME">
-        </a>
+    <div id="test4" class="frame-header">
         <input class="URLs" id="URL4" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL4', 'iframe4')" value="GO">
         <button class="iframe-button" onclick="backPage()">Back</button>
         <button class="iframe-button" onclick="forwardPage()">Forward</button>
-        &emsp;
-        <button class="iframe-button" id="frame4" onclick="strinkFrame(this.id)">30%</button>
-        <button class="iframe-button" id="frame4" onclick="expandFrame(this.id)">60%</button>
-        <button class="iframe-button" id="frame4" onclick="largeFrame(this.id)">90%</button>
+        <div class="frame-size-buttons">
+
+            <button class="iframe-button" id="frame4" onclick="strinkFrame(this.id)">30%</button>
+            <button class="iframe-button" id="frame4" onclick="expandFrame(this.id)">60%</button>
+            <button class="iframe-button" id="frame4" onclick="largeFrame(this.id)">90%</button>
+        </div>
     </div>
     <iframe src="https://www.wordhippo.com/" class="frames" name="iframe4" id="iframe4"></iframe>
 </div>
 
 
-    {{!-- <iframe src="https://www.wordhippo.com/" class="frames" name="iframe4" id="iframe4"></iframe> --}}
+{{!-- <iframe src="https://www.wordhippo.com/" class="frames" name="iframe4" id="iframe4"></iframe> --}}
 
 
 
