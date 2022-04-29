@@ -65,8 +65,9 @@
     <button class="tablinks" onclick="viewTwo()">View 2</button>
     <button class="tablinks" onclick="viewThree()">View 3</button>
     <button class="tablinks" onclick="viewFour()">View 4</button>
+    <button class="tablinks" >Sites that work ->></button>
     <input id="myInput" type="submit" value="http://www.lipsum.com/" onclick="myFunction(this.value)">
-    <input id="myInput" type="submit" value="https://www.google.com/search?igu=1" onclick="myFunction(this.value)">
+    <input id="myInput" type="submit" value="https://www.google.com/search?igu=1" oncfavorilick="myFunction(this.value)">
     <input id="myInput" type="submit" value="https://www.yelp.com/" onclick="myFunction(this.value)">
     <input id="myInput" type="submit" value="https://en.wikipedia.org/wiki/Main_Page" onclick="myFunction(this.value)">
     <input id="myInput" type="submit" value="https://www.desmos.com/calculator" onclick="myFunction(this.value)">
@@ -74,15 +75,16 @@
 </div>
 
 <br>
-<div class="frame-container" style="width: 30%;" id="frame1">
+<div class="frame-container" id="frame1">
     <div id="test1" class="frame-header">
         {{!-- <a href="https://www.google.com/search?igu=1" style="text-decoration: none;" target="iframe1">
             <input type="button" value="HOME">
         </a> --}}
+        &emsp;
         <input class="URLs" id="URL1" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL1', 'iframe1')" value="GO">
-        <button class="iframe-button" onclick="backPage()">Back</button>
-        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        {{!-- <button class="iframe-button" onclick="backPage()">Back</button> --}}
+        {{!-- <button class="iframe-button" onclick="forwardPage()">Forward</button> --}}
         {{!-- &emsp; --}}
         <div class="frame-size-buttons">
 
@@ -95,10 +97,11 @@
 </div>
 <div class="frame-container" id="frame2">
     <div id="test2" class="frame-header">
+        &emsp;
         <input class="URLs" id="URL2" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL2', 'iframe2')" value="GO">
-        <button class="iframe-button" onclick="backPage()">Back</button>
-        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        {{!-- <button class="iframe-button" onclick="backPage()">Back</button> --}}
+        {{!-- <button class="iframe-button" onclick="forwardPage()">Forward</button> --}}
         <div class="frame-size-buttons">
 
             <button class="iframe-button" id="frame2" onclick="strinkFrame(this.id)">30%</button>
@@ -110,10 +113,11 @@
 </div>
 <div class="frame-container" id="frame3">
     <div id="test3" class="frame-header">
+        &emsp;
         <input class="URLs" id="URL3" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL3', 'iframe3')" value="GO">
-        <button class="iframe-button" onclick="backPage()">Back</button>
-        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        {{!-- <button class="iframe-button" onclick="backPage()">Back</button> --}}
+        {{!-- <button class="iframe-button" onclick="forwardPage()">Forward</button> --}}
         &emsp;
         <div class="frame-size-buttons">
 
@@ -126,10 +130,11 @@
 </div>
 <div class="frame-container" id="frame4">
     <div id="test4" class="frame-header">
+        &emsp;
         <input class="URLs" id="URL4" type="search">
         <input class="iframe-button" type="button" onClick="iframeURL('#URL4', 'iframe4')" value="GO">
-        <button class="iframe-button" onclick="backPage()">Back</button>
-        <button class="iframe-button" onclick="forwardPage()">Forward</button>
+        {{!-- <button class="iframe-button" onclick="backPage()">Back</button> --}}
+        {{!-- <button class="iframe-button" onclick="forwardPage()">Forward</button> --}}
         <div class="frame-size-buttons">
 
             <button class="iframe-button" id="frame4" onclick="strinkFrame(this.id)">30%</button>
