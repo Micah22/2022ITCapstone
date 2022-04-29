@@ -109,6 +109,7 @@
                 ws.onopen = () => {
                     console.log('Connection opened!');
                 }
+                //ws.onmessage = ({ message: data }) => showMessage(JSON.parse(message['data']));
                 ws.onmessage = ({ data }) => showMessage(data);
                 ws.onclose = function () {
                     ws = null;
