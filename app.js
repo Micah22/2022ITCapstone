@@ -65,6 +65,11 @@ app.get("/login", function (req, res) {
 	res.render("login", { layout: 'login' });
 });
 
+app.get("/register", function (req, res) {
+	res.render("register", { layout: 'login' });
+});
+
+
 // Handle the login action
 app.post("/login", async function (req, res) {
 	req.session.user = req.body.username;
