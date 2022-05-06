@@ -58,6 +58,37 @@ div a div h2 {
 }
 
 
+/* RE-DO SIDEBAR STYLES */
+#sidebar-main {
+  /* float: right; */
+  text-align: center;
+  width: 15%;
+  right: 70px;
+  height: 100%;
+  border-left: 1px solid black;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
+
+.sidebar-category {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.sidebar-notif {
+  background-color: rgba(43, 43, 43, 0.281);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.sidebar-notif-header {
+  font-size: 1rem;
+}
+
+.sidebar-notif-body {
+  font-size: 0.8rem;
+}
+
 /* SIDE BAR STYLES */
 center div div h2 {
   border-bottom: 1px solid black;
