@@ -1,0 +1,26 @@
+<center>
+
+
+  <h1 style="font-size: 60px;">CollegeConnect</h1>
+  {{#if error}}
+  <p>{{error}}</p>
+  {{/if}}
+  <br>
+  <form action="/login" method="POST">
+    <label>Create a username</label>
+    <input class="SignInFields" type="text" id="username" name="username">
+    <br>
+    <label>Create a password</label>
+    <input class="SignInFields" type="password" id="password" name="password">
+    <br>
+    <label>Re-Enter password</label>
+    <input class="SignInFields" type="password" id="verifyPassword" name="verifyPassword">
+    <br>
+    <br>
+    <input class="SignInButton" type="submit" value="Register">
+
+  </form>
+  <br>
+  <a href="/login">Already Have an Account?</a>
+
+</center>
