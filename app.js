@@ -3,8 +3,6 @@ let app = express();
 const session = require("express-session");
 
 
-
-
 // WEBSOCKET STUFF 
 const http = require('http');
 const WebSocket = require('ws');

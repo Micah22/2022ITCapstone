@@ -512,6 +512,8 @@ center div div h2 {
 }
 
 
+
+/* ZOOM ROOM CSS */
 .zoom-frame {
   height: 300px;
   width: 250px;
@@ -520,13 +522,40 @@ center div div h2 {
   background-color: rgb(108, 108, 108);
 }
 
-.zoom-video {
+#videoElement {
   height: 290px;
-  width: 240px;
+  width: 100%;
 }
 
 .zoom-header {
   height: 30px;
   font-size: 1.1rem;
   text-align: center;
+}
+
+.zoomChatroom {
+  text-align: center;
+  width: 30%;
+  right: 70px;
+  height: 50%;
+  border-left: 1px solid black;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
+
+.roomMessages {
+  height: 200px;
+  background-color: white;
+}
+
+.userMessages {
+  height: 20px;
+  width: 80%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.zoom-video {
+  height: 250px;
+  width: 250px;
 }
