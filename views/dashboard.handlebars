@@ -1,17 +1,21 @@
 {{!-- <h1>Dashboard</h1> --}}
 
 
-    {{#each student}}
-<h1>Welcome {{name}}!</h1>
-
-<hr>
-
+{{#each student}}
 <div id="dash">
+    <h1>Welcome {{name}}!</h1>
+
+
+
+
+    <hr>
+
     {{#each classes}}
     <div class="card">
         <a href="/{{courseCode}}">
             <div class="container">
-                <h2>{{courseName}} - {{courseCode}}</h2>
+                <h2>{{courseName}}</h2>
+                <h2>{{courseCode}}</h2>
             </div>
             <img src="images/class.jpg" class="classImg">
         </a>
@@ -23,93 +27,93 @@
         </a>
     </div>
 </div>
-    {{/each}}
+{{/each}}
 
 
 
 <div id="sidebar-main">
     <div class="sidebar-category">
-        CATEGORY
+        May 17th, 2022
+    </div>
+    {{!-- <div class="sidebar-notif">
+        <div class="sidebar-notif-header">
+            Data Visualization
+        </div>
+        <div class="sidebar-notif-body">
+            <ul class="notifText">
+                <li>
+                    Tableau Charts Dashboard DUE: 5/8
+                </li>
+            </ul>
+        </div>
+    </div> --}}
+    <br>
+    <div class="sidebar-category">
+        Assignments This Week
     </div>
     <div class="sidebar-notif">
         <div class="sidebar-notif-header">
-            HEADER
+            Data Visualization
         </div>
         <div class="sidebar-notif-body">
-            BODY
+            <ul class="notifText">
+                <li>
+                    Tableau Charts Dashboard DUE: 5/8
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="sidebar-notif">
+        <div class="sidebar-notif-header">
+            Cloud Computing
+        </div>
+        <div class="sidebar-notif-body">
+            <ul class="notifText">
+                <li>
+                    Final Assignment-Project DUE: 5/13
+                </li>
+                <li>
+                    Deployment Quiz DUE: 5/12
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    {{!-- <br> --}}
+
+    <div class="sidebar-category">
+        Course Grades
+    </div>
+    <div class="sidebar-notif">
+        {{#each student}}
+        {{#each classes}}
+        <div class="sidebar-notif-body tag">
+            <strong>{{courseName}}:</strong> {{courseGrade}}
+        </div>
+        {{/each}}
+        {{/each}}
+    </div>
+
+
+
+    {{!-- <div class="sidebar-category">
+        Chatroom
+    </div>
+    <div class="sidebar-notif">
+        <div class="sidebar-notif-header">
+
+        </div>
+        <div class="sidebar-notif-body">
+            <pre id="messages"
+                style="height: 200px; padding:8px; background-color: rgb(255, 255, 255); border: 1px solid black;"></pre>
+
+            <input type="text" id="usernameBox" placeholder="Type your username here"
+                style="display: block; padding: 5px; " />
+            <input type="text" id="messageBox" placeholder="Type your message here"
+                style="display: block; padding: 5px; height:50px; " />
+            <button id="send" title="Send Message!" style="height: 100%;">Send Message</button>
+        </div>
+    </div> --}}
 </div>
-
-
-
-
-{{!-- 
-<center>
-    <div id="right-bar">
-        <div id="to-do">
-            <h2>To-Do</h2>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>Midterms graded</strong>
-                </div>
-                <div id="notifBody">
-                    Mar 14 at 9:40pm
-                </div>
-            </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Header}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
-            </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Header}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
-            </div>
-        </div>
-        <div id="recent">
-            <h2>Feedback/Notifs</h2>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>Module 3 - Assignment</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>Data Visualization - CTS4457</strong>
-                </div>
-                <div id="notifBody">
-                    "Looks good!"
-                </div>
-            </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Assignment}</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>{Class}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
-            </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Assignment}</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>{Class}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
-            </div>
-
-        </div>
-    </div>
-</center> --}}

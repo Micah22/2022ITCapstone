@@ -59,6 +59,9 @@ const studentController = {
     },
     filesRoute: function (req, res) {
         res.render('files')
+    },
+    scaledrone: function (req, res) {
+        res.sendFile('scaledrone.html')
     }
 }
 

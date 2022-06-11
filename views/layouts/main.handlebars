@@ -4,7 +4,7 @@
 <head>
 
     <title>CollegeConnect</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleRemodel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -25,11 +25,13 @@
 
         function openOverlay() {
             document.getElementById("rightOverlay").style.width = "250px";
+            document.getElementById("test").style.background = "rgb(160, 190, 247)";
         }
 
         /* Set the width of the side navigation to 0 */
         function closeOverlay() {
             document.getElementById("rightOverlay").style.width = "0";
+            document.getElementById("test").style.background = "rgb(63, 63, 63)";
         }
 
 
@@ -37,7 +39,6 @@
 
 
     </script>
-
 
     <div id="mySidenav" class="sidenav">
         <table border="1px" width="100%">
@@ -55,16 +56,8 @@
             </tr>
 
             <tr>
-                <td rowspan="2">
-                    <pre id="messages"
-                        style="height: 200px; padding:8px; background-color: rgb(255, 255, 255); border: 1px solid black; overflow-x: hidden;"></pre>
-                </td>
                 <td>
-                    <input type="text" id="usernameBox" placeholder="Type your username here"
-                        style="display: block; padding: 10px; " />
-                    <input type="text" id="messageBox" placeholder="Type your message here"
-                        style="display: block; padding: 10px; height:100px; " />
-                    <button id="send" title="Send Message!" style="height: 100%;">Send Message</button>
+                    t
                 </td>
 
             </tr>
@@ -72,6 +65,7 @@
 
 
     </div>
+
 
     <script>
         var input = document.getElementById("messageBox");
@@ -157,6 +151,10 @@
                 <span class="tooltiptext">Home</span>
             </div>
             <div class="tooltip">
+                <a href="/scaledrone">T</a>
+                <span class="tooltiptext">TEST</span>
+            </div>
+            <div class="tooltip">
                 <a href="#"><i class="fa fa-envelope"></i></a>
                 <span class="tooltiptext">Email</span>
             </div>
@@ -164,9 +162,13 @@
                 <a href="/Multitask"><i class="fa fa-object-group"></i></a>
                 <span class="tooltiptext">MultiTask</span>
             </div>
-            <div class="tooltip">
+            <div class="tooltip" id="test">
                 <a onclick="openOverlay()"><i class="fa fa-group"></i></a>
                 <span class="tooltiptext">Collab</span>
+            </div>
+            <div class="tooltip">
+                <a href="#"><i class="fa fa-address-book"></i></a>
+                <span class="tooltiptext">Contacts</span>
             </div>
             <div class="tooltip">
                 <a href="/zoom"><i class="fa fa-video-camera"></i></a>
@@ -180,10 +182,6 @@
                 <a href="#"><i class="fa fa-calendar"></i></a>
                 <span class="tooltiptext">Calendar</span>
             </div>
-            {{!-- <div class="tooltip">
-                <a href="#"><i class="fa fa-address-book"></i></a>
-                <span class="tooltiptext">Contacts</span>
-            </div> --}}
 
             {{!-- <a href="#"><i class="fa fa-search"></i></a> --}}
             {{!-- <a href="#"><i class="fa fa-globe"></i></a> --}}
@@ -202,15 +200,9 @@
             <a href="#">Scaling Networks</a>
             <a href="#">Data Visualization</a>
         </div>
-
-
-
-
-
-
-
-
     </div>
+
+    
 </body>
 
 <div class="footer">

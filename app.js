@@ -2,8 +2,7 @@ const express = require('express');
 let app = express();
 const session = require("express-session");
 
-
-
+var module = require('module_name')
 
 // WEBSOCKET STUFF 
 const http = require('http');
@@ -100,7 +99,15 @@ app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
 app.get('/zoom', studentController.zoomRoute);
 app.get('/files', studentController.filesRoute);
+
+const path = require('path');
+app.get("/scaledrone", function (req, res) {
+	res.sendFile(path.join(__dirname, 'views/scaledrone.html'));
+});
+
+
 app.get('/:courseCode', studentController.classRoute);
+
 
 
 // 404 catch-all handler (middleware)

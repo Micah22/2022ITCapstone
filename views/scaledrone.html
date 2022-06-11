@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <script type='text/javascript' src="../public/scripts/script.js"></script>
+
+    <style>
+        body,
+        input {
+            font-size: 17px;
+        }
+
+        .message {
+            margin: 15px 0;
+        }
+
+        .input-area {
+            display: flex;
+        }
+
+        .input {
+            width: 100%;
+            line-height: 40px;
+            border: 2px solid #C3C3C3;
+            border-radius: 8px;
+            padding: 0 15px;
+        }
+
+        .input.name {
+            flex-basis: 200px;
+            flex-grow: 0;
+            margin-right: 5px;
+        }
+
+        .input.content {
+            flex-grow: 1;
+            margin-right: 5px;
+        }
+
+        .input.button {
+            flex-basis: 120px;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-area"></div>
+    <form class="input-area" onsubmit="onSubmitForm(); return false;">
+        <input type="text" class="input name" placeholder="Name..">
+        <input type="text" class="input content" placeholder="Message..">
+        <input type="submit" class="input button" value="Send">
+    </form>
+</body>
+
+</html>
