@@ -2,7 +2,7 @@ const express = require('express');
 let app = express();
 const session = require("express-session");
 
-var module = require('module_name')
+
 
 // WEBSOCKET STUFF 
 const http = require('http');

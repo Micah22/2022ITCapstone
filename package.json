@@ -1,11 +1,10 @@
 {
-  "name": "nodejs-crud",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "collegeconnect",
+  "version": "2.0.0",
+  "description": "This app is proof of concept for a capstone class. It is modeled after canvas, but includes more. This app includes a chatroom, embeded sites such as google docs, discord, and quizlet, and study group functionality.",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -25,5 +24,17 @@
     "socket.io": "^4.5.0",
     "uuid": "^8.3.2",
     "ws": "^8.5.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Micah22/2022ITCapstone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Micah22/2022ITCapstone/issues"
+  },
+  "homepage": "https://github.com/Micah22/2022ITCapstone#readme"
 }
