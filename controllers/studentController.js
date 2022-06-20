@@ -8,7 +8,7 @@ const studentController = {
         if (user.length > 0) {
             const valid = await studentService.getStudentClassesByUsername(req.session.user)
             if (valid.length > 0) {
-                console.log(valid)
+                // console.log(valid)
                 res.render('dashboard', {
                     route: req.params.route,
                     username: req.session.user,
@@ -16,7 +16,7 @@ const studentController = {
                 })
             } else {
                 const valid = await studentService.getTeacherClassesByUsername(req.session.user)
-                console.log(valid)
+                // console.log(valid)
                 res.render('teacherDashboard', {
                     route: req.params.route,
                     username: req.session.user,
