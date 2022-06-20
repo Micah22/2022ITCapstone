@@ -7,7 +7,7 @@ const session = require("express-session");
 // WEBSOCKET STUFF 
 const http = require('http');
 // const WebSocket = require('ws');
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
 // const port = 4000;
 const server = http.createServer(express);
 // const wss = new WebSocket.Server({ server })
@@ -21,9 +21,9 @@ const server = http.createServer(express);
 // 	})
 // })
 
-server.listen(port, function () {
-	console.log(`Server is listening on ${port}!`)
-})
+
+
+
 
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
@@ -32,6 +32,17 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
+
+
+
+
+
+
+server.listen(port, function () {
+	console.log(`Server is listening on ${port}!`)
+})
+
+
 
 // ADDING STATIC FILE (CONTAINS IMAGES, CSS, ETC)
 app.use(express.static(__dirname + '/public'));
