@@ -21,9 +21,9 @@ wss.on('connection', function connection(ws) {
 	})
 })
 
-// server.listen(port, function () {
-// 	console.log(`Server is listening on ${port}!`)
-// })
+server.listen(port, function () {
+	console.log(`Server is listening on ${port}!`)
+})
 
 // set up handlebars view engine
 let handlebars = require('express-handlebars')
