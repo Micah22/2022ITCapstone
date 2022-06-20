@@ -7,7 +7,8 @@ const session = require("express-session");
 // WEBSOCKET STUFF 
 const http = require('http');
 const WebSocket = require('ws');
-const port = 4000;
+const port = process.env.PORT || 5000;
+// const port = 4000;
 const server = http.createServer(express);
 const wss = new WebSocket.Server({ server })
 wss.on('connection', function connection(ws) {
