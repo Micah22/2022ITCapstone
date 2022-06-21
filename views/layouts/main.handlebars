@@ -13,12 +13,15 @@
         function openNav() {
             document.getElementById("mySidenav").style.height = "500px";
             document.getElementById("chat").style.height = "500px";
-            //document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function minNav() {
+            document.getElementById("mySidenav").style.height = "300px";
+            document.getElementById("chat").style.height = "300px";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.height = "40px";
-            //document.getElementById("main").style.marginLeft = "0";
         }
 
 
@@ -42,14 +45,17 @@
         <table border="1px" width="100%">
             <tr style="padding:0px">
                 <td>
-                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:15px; padding:0px"
-                        onclick="openNav()">
-                        Chatroom
-                    </a>
+                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:25px; padding:0px"
+                        onclick="openNav()">Chatroom</a>
                 </td>
                 <td>
-                    <a href="javascript:void(0)" class="openbtn" style="float: right; padding:0px"
-                        onclick="closeNav()">&times;</a>
+                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px"
+                        onclick="closeNav()">Close</a>
+
+                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px"
+                        onclick="openNav()">&nbsp; Max &nbsp;</a>
+                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px" onclick="minNav()">
+                        &nbsp; Min</a>
                 </td>
             </tr>
 
