@@ -281,12 +281,12 @@ h1 {
 /* The side navigation menu */
 .sidenav {
   height: 300px;
-  width: 350px;
+  width: 400px;
   /* 0 width - change this with JavaScript */
   position: fixed;
   z-index: 1;
   bottom: 0;
-  right: 70px;
+  right: 100px;
   background-color: rgb(226, 226, 226);
   /* background-color: #111; */
   border: black 1px solid;
