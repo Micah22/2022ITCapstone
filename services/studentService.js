@@ -26,6 +26,9 @@ const studentService = {
     },
     getAdminByUsername: async (Username) => {
         return Admin.find({ username: Username }).lean()
+    },
+    addNewCourse: async (newCourse) => {
+        return new Course(newCourse).save()
     }
 
 }

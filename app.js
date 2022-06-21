@@ -77,12 +77,8 @@ app.get('/dashboard', studentController.dashboardRoute);
 app.get('/multitask', studentController.multitaskRoute);
 app.get('/zoom', studentController.zoomRoute);
 app.get('/files', studentController.filesRoute);
-
-const path = require('path');
-app.get("/scaledrone", function (req, res) {
-	res.sendFile(path.join(__dirname, 'views/scaledrone.html'));
-});
-
+app.get('/addCourse', studentController.addCourseRoute);
+app.get('/newCourse', studentController.addCourseRoute);
 
 app.get('/:courseCode', studentController.classRoute);
 
