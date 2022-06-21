@@ -2,8 +2,10 @@ const mongoose = require("mongoose");
 require("../models/studentDB");
 require("../models/secureDB");
 require("../models/teacherDB");
+require("../models/adminDB");
 const Student = mongoose.model("Student")
 const Teacher = mongoose.model("Teacher")
+const Admin = mongoose.model("Admin")
 const Secure = mongoose.model("Secure")
 
 const studentService = {
@@ -21,6 +23,9 @@ const studentService = {
     },
     getTeacherClassesByUsername: async (Username) => {
         return Teacher.find({ username: Username }).lean()
+    },
+    getAdminByUsername: async (Username) => {
+        return Admin.find({ username: Username }).lean()
     }
 
 }
