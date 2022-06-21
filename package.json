@@ -3,11 +3,12 @@
   "version": "2.0.0",
   "description": "This app is proof of concept for a capstone class. It is modeled after canvas, but includes more. This app includes a chatroom, embeded sites such as google docs, discord, and quizlet, and study group functionality.",
   "main": "app.js",
-  "engines" : {
+  "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "express-session": "^1.17.2",
     "frameguard": "^4.0.0",
     "fs": "^0.0.1-security",
+    "get-port": "^6.1.2",
     "module_name": "^1.0.0",
     "mongoose": "^6.2.9",
     "node": "^17.7.2",
@@ -31,7 +33,6 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Micah22/2022ITCapstone.git"

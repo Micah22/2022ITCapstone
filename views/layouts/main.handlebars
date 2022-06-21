@@ -11,7 +11,8 @@
 <body>
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.height = "300px";
+            document.getElementById("mySidenav").style.height = "500px";
+            document.getElementById("chat").style.height = "500px";
             //document.getElementById("main").style.marginLeft = "250px";
         }
 
@@ -35,16 +36,13 @@
         }
 
 
-
-
-
     </script>
 
     <div id="mySidenav" class="sidenav">
         <table border="1px" width="100%">
-            <tr style="padding:0px" height="10px">
+            <tr style="padding:0px">
                 <td>
-                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:30px; padding:0px"
+                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:15px; padding:0px"
                         onclick="openNav()">
                         Chatroom
                     </a>
@@ -56,17 +54,8 @@
             </tr>
 
             <tr>
-                <td>
-                    <pre id="messages"
-                        style="height: 200px; padding:8px; background-color: rgb(255, 255, 255); border: 1px solid black;"></pre>
-                </td>
-                <td>
-                    <input type="text" id="usernameBox" placeholder="Type your username here"
-                        style="display: block; padding: 5px; " />
-
-                    <input type="text" id="messageBox" placeholder="Type your message here"
-                        style="display: block; padding: 5px; height:50px; " />
-                    <button id="send" title="Send Message!" style="height: 100%;">Send Message</button>
+                <td colspan="2">
+                    <iframe id="chat" src="https://deadsimplechat.com/Uog26Dn8o"></iframe>
                 </td>
 
             </tr>
@@ -76,69 +65,6 @@
     </div>
 
 
-    <script>
-        var input = document.getElementById("messageBox");
-
-        input.addEventListener("keyup", function (event) {
-            // Number 13 is the "Enter" key on the keyboard
-            if (event.keyCode === 13) {
-                // Cancel the default action, if needed
-                event.preventDefault();
-                // Trigger the button element with a click
-                document.getElementById("send").click();
-            }
-        });
-        (function () {
-            const sendBtn = document.querySelector('#send');
-            const messages = document.querySelector('#messages');
-            const messageBox = document.querySelector('#messageBox');
-            const usernameBox = document.querySelector('#usernameBox');
-
-            let ws;
-
-            function showMessage(message, username) {
-                messages.textContent += `\n\n${username}:${message}`;
-                messages.scrollTop = messages.scrollHeight;
-                messageBox.value = '';
-                usernameBox.value = '';
-            }
-            function init() {
-                if (ws) {
-                    ws.onerror = ws.onopen = ws.onclose = null;
-                    ws.close();
-                }
-
-                ws = new WebSocket('ws://localhost:4000');
-                ws.onopen = () => {
-                    console.log('Connection opened!');
-                }
-                //ws.onmessage = ({ message: data }) => showMessage(JSON.parse(message['data']));
-                ws.onmessage = ({ data }) => showMessage(data);
-                ws.onclose = function () {
-                    ws = null;
-                }
-            }
-
-            sendBtn.onclick = function () {
-                if (!ws) {
-                    showMessage("No WebSocket connection :(");
-                    return;
-                }
-
-                //const usernameBox = getElementById('usernameBox').value || '???'
-                //const messageBox = getElementById('messageBox').value || '???'
-                //ws.send(messageBox.value);
-                ws.send(usernameBox.value);
-                //ws.send(`${usernameBox}: ${getElement('messageBox').value}`);
-                showMessage(messageBox.value, usernameBox.value);
-            }
-
-            init();
-        })();
-
-
-
-    </script>
 
 
     <div id="main">
