@@ -21,8 +21,6 @@ app.use(express.urlencoded({}))
 require("./models/db");
 
 
-
-
 // Set up cookie parser and sessions
 const COOKIE_SECRET = "keyboard cat"; // My secret to secure cookies
 app.use(require("cookie-parser")(COOKIE_SECRET)); // Parse incoming cookies
