@@ -1,102 +1,107 @@
 {{!-- <h1>Dashboard</h1> --}}
 
-
-{{#each student}}
-<div id="dash">
-    <h1>Welcome {{name}}!</h1>
-
-
+<div class="Dashboard">
+    {{#each student}}
+    <div id="dash">
+        <h1>Welcome {{name}}!</h1>
 
 
-    <hr>
 
-    {{#each classes}}
-    <div class="card">
-        <a href="/{{courseCode}}">
-            <div class="container">
-                <h2>{{courseName}}</h2>
-                <h2>{{courseCode}}</h2>
-            </div>
-            <img src="images/class.jpg" class="classImg">
-        </a>
+
+        <hr>
+
+        {{#each classes}}
+        <div class="card">
+            <a href="/{{courseCode}}">
+                <div class="container">
+                    <h2>{{courseName}}</h2>
+                    <h2>{{courseCode}}</h2>
+                </div>
+                <img src="images/class.jpg" class="classImg">
+            </a>
+        </div>
+        {{/each}}
+        <div class="card addClass">
+            <a href="/addCourse">
+                <img src="images/plusSign.jpg" class="classImg">
+            </a>
+        </div>
     </div>
     {{/each}}
-    <div class="card addClass">
-        <a href="/addCourse">
-            <img src="images/plusSign.jpg" class="classImg">
-        </a>
-    </div>
-</div>
-{{/each}}
 
 
 
-<div id="sidebar-main">
-    <div class="sidebar-category">
-        May 17th, 2022
-    </div>
-    {{!-- <div class="sidebar-notif">
-        <div class="sidebar-notif-header">
-            Data Visualization
+    <div id="sidebar-main">
+        <div class="sidebar-category">
+            May 17th, 2022
         </div>
-        <div class="sidebar-notif-body">
-            <ul class="notifText">
-                <li>
-                    Tableau Charts Dashboard DUE: 5/8
-                </li>
-            </ul>
+        {{!-- <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Data Visualization
+            </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    <li>
+                        Tableau Charts Dashboard DUE: 5/8
+                    </li>
+                </ul>
+            </div>
+        </div> --}}
+        <br>
+        <div class="sidebar-category">
+            The Week Ahead
         </div>
-    </div> --}}
-    <br>
-    <div class="sidebar-category">
-        Assignments This Week
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Wednesday
+            </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    <li>
+                        COP3813: Tableau Charts Dashboard
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Thursday
+            </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    <li>
+                        COP3813: Final Assignment-Project
+                    </li>
+                    <li>
+                        CTS4457: Deployment Quiz
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Friday
+            </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    {{!-- <li>
+                        N/a
+                    </li> --}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-category">
+            Course Grades
+        </div>
+        <div class="sidebar-notif">
+            {{#each student}}
+            {{#each classes}}
+            <div class="sidebar-notif-body tag">
+                <strong>{{courseName}}:</strong> {{courseGrade}}
+            </div>
+            {{/each}}
+            {{/each}}
+        </div>
     </div>
-    <div class="sidebar-notif">
-        <div class="sidebar-notif-header">
-            Data Visualization
-        </div>
-        <div class="sidebar-notif-body">
-            <ul class="notifText">
-                <li>
-                    Tableau Charts Dashboard DUE: 5/8
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="sidebar-notif">
-        <div class="sidebar-notif-header">
-            Cloud Computing
-        </div>
-        <div class="sidebar-notif-body">
-            <ul class="notifText">
-                <li>
-                    Final Assignment-Project DUE: 5/13
-                </li>
-                <li>
-                    Deployment Quiz DUE: 5/12
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
-    {{!-- <br> --}}
-
-    <div class="sidebar-category">
-        Course Grades
-    </div>
-    <div class="sidebar-notif">
-        {{#each student}}
-        {{#each classes}}
-        <div class="sidebar-notif-body tag">
-            <strong>{{courseName}}:</strong> {{courseGrade}}
-        </div>
-        {{/each}}
-        {{/each}}
-    </div>
-
-
-
-    
 </div>

@@ -6,89 +6,141 @@
     <title>CollegeConnect</title>
     <link rel="stylesheet" href="css/styleRemodel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!--
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> --}}
 </head>
 
 <body>
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.height = "550px";
-            document.getElementById("chat").style.height = "500px";
-        }
-
-        function minNav() {
-            document.getElementById("mySidenav").style.height = "300px";
-            document.getElementById("chat").style.height = "250px";
+            document.getElementById("mySidenav").style.width = "350px";
+            document.getElementById("main").style.marginRight = "330px";
         }
 
         function closeNav() {
-            document.getElementById("mySidenav").style.height = "40px";
-            document.getElementById("chat").style.height = "20px";
+            document.getElementById("mySidenav").style.width = "30px";
+            document.getElementById("main").style.marginRight = "0px";
         }
 
 
 
 
         function openOverlay() {
-            document.getElementById("rightOverlay").style.width = "250px";
+            document.getElementById("rightOverlay").style.height = "250px";
             document.getElementById("test").style.background = "rgb(160, 190, 247)";
         }
 
         /* Set the width of the side navigation to 0 */
         function closeOverlay() {
-            document.getElementById("rightOverlay").style.width = "0";
+            document.getElementById("rightOverlay").style.height = "0";
             document.getElementById("test").style.background = "rgb(63, 63, 63)";
+        }
+
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("navBar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
         }
 
 
     </script>
 
     <div id="mySidenav" class="sidenav">
-        <table border="1px" width="100%">
-            <tr style="padding:0px">
-                <td>
-                    <a href="javascript:void(0)" class="openbtn" style="float: left; font-size:25px; padding:0px"
+        <table border="1px" width="100%" style="height: 100%;">
+            <tr>
+                <td rowspan="2">
+                    <a href="javascript:void(0)" class="openbtn"
+                        style="font-size:25px; padding:0px; width:25px; transform: rotate(-90deg);"
                         onclick="openNav()">Chatroom</a>
+                    <a href="javascript:void(0)" class="fa fa-close" style="float: right; font-size:20px; padding:0px"
+                        onclick="closeNav()"></a>
                 </td>
-                <td>
-                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px"
-                        onclick="closeNav()">Close</a>
 
-                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px"
-                        onclick="openNav()">&nbsp; Max &nbsp;</a>
-                    <a href="javascript:void(0)" class="openbtn" style="float: right; font-size:20px; padding:0px"
-                        onclick="minNav()">
-                        &nbsp; Min</a>
-                </td>
             </tr>
 
             <tr>
-                <td colspan="2">
-                    <iframe id="chat" src="https://deadsimplechat.com/Uog26Dn8o"></iframe>
-
+                <td>
+                    <iframe height="100%"></iframe>
                 </td>
 
             </tr>
         </table>
-
-
     </div>
 
 
 
+    <div id="navBar">
+        {{!-- <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li> --}}
+        <li id="navLI"><a id="nav" href="/Dashboard" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
 
+
+
+        <div class="topnav-right">
+            <li id="navLI">
+                <a id="nav" href="/Dashboard" style="font-size: 35px;">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="#" style="font-size: 35px;">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="/multitask" style="font-size: 35px;">
+                    <i class="fa fa-object-group"></i>
+                </a>
+            </li>
+            <li id="navLI" class="tooltip">
+                <a id="nav" onclick="openOverlay()" style="font-size: 35px;">
+                    <i class="fa fa-group"></i>
+                </a>
+            </li>
+
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="/zoom" style="font-size: 35px;">
+                    <i class="fa fa-video-camera"></i>
+                </a>
+            </li>
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="#" style="font-size: 35px;">
+                    <i class="fa fa-folder-open"></i>
+                </a>
+            </li>
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="#" style="font-size: 35px;">
+                    <i class="fa fa-calendar"></i>
+                </a>
+            </li>
+
+
+            <li id="navLI" class="tooltip">
+                <a id="nav" href="/Login" style="font-size: 35px;">
+                    <i class="fas fa-door-open">Log Out</i>
+                </a>
+            </li>
+
+
+
+        </div>
+    </div>
     <div id="main">
-
-        <ul id="navBar">
-            <li id="navLI"><a id="nav" onclick="openNav()">&#9776;</a></li>
-            <li id="navLI"><a id="nav" href="/Dashboard" style="font-size: 35px;">CollegeConnect {{route}}</a></li>
-            <div class="topnav-right">
-                <li id="navLI"><a id="nav" href="/login">Log Out</a></li>
-
-            </div>
-
-        </ul>
         {{{body}}}
-        <div class="icon-bar">
+
+        {{!-- <div class="icon-bar">
             <div class="tooltip">
                 <a href="/Dashboard"><i class="fa fa-home"></i></a>
                 <span class="tooltiptext">Home</span>
@@ -122,10 +174,11 @@
                 <span class="tooltiptext">Calendar</span>
             </div>
 
-            {{!-- <a href="#"><i class="fa fa-search"></i></a> --}}
-            {{!-- <a href="#"><i class="fa fa-globe"></i></a> --}}
-            {{!-- <a href="#"><i class="fa fa-trash"></i></a> --}}
-        </div>
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-close"></i></a>
+            <a href="#"><i class="fa fa-globe"></i></a>
+            <a href="#"><i class="fa fa-trash"></i></a>
+        </div> --}}
 
 
 
@@ -143,9 +196,5 @@
 
 
 </body>
-
-<div class="footer">
-    <p>Footer</p>
-</div>
 
 </html>
