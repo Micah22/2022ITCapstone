@@ -8,7 +8,7 @@
 </style>
 
 
-    <table width="100%" border="1px" style="font-size: 1.2rem;">
+    <table width="50%" border="1px" style="font-size: 1.2rem;">
         <tr>
             <th style="background-color:bisque;">
                 MODULE 1: Inclusive Teaching and Learning - Must Read
@@ -55,70 +55,65 @@
 
 
 <center>
-    <div id="right-bar">
-        <div id="to-do">
-            <h2>To-Do</h2>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>Midterms graded</strong>
-                </div>
-                <div id="notifBody">
-                    Mar 14 at 9:40pm
-                </div>
+    <div id="sidebar-main">
+        <div class="sidebar-category">
+            May 17th, 2022
+        </div>
+        <br>
+        <div class="sidebar-category">
+            The Week Ahead
+        </div>
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Wednesday
             </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Header}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
-            </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Header}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    <li>
+                        COP3813: Tableau Charts Dashboard
+                    </li>
+                </ul>
             </div>
         </div>
-        <div id="recent">
-            <h2>Feedback/Notifs</h2>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>Module 3 - Assignment</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>Data Visualization - CTS4457</strong>
-                </div>
-                <div id="notifBody">
-                    "Looks good!"
-                </div>
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Thursday
             </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Assignment}</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>{Class}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    <li>
+                        COP3813: Final Assignment-Project
+                    </li>
+                    <li>
+                        CTS4457: Deployment Quiz
+                    </li>
+                </ul>
             </div>
-            <div id="notif">
-                <div id="notifHeader">
-                    <strong>{Assignment}</strong>
-                </div>
-                <div id="notifClass">
-                    <strong>{Class}</strong>
-                </div>
-                <div id="notifBody">
-                    {Body}
-                </div>
+        </div>
+        <div class="sidebar-notif">
+            <div class="sidebar-notif-header">
+                Friday
             </div>
+            <div class="sidebar-notif-body">
+                <ul class="notifText">
+                    {{!-- <li>
+                        N/a
+                    </li> --}}
+                </ul>
+            </div>
+        </div>
 
+        <div class="sidebar-category">
+            Course Grades
+        </div>
+        <div class="sidebar-notif">
+            {{#each student}}
+            {{#each classes}}
+            <div class="sidebar-notif-body tag">
+                <strong>{{courseName}}:</strong> {{courseGrade}}
+            </div>
+            {{/each}}
+            {{/each}}
         </div>
     </div>
 </center>

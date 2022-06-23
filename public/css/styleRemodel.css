@@ -56,24 +56,23 @@ h1 {
   float: left;
   /* display: block; */
   height: 100%;
-  width: 70%;
-  /* background-color: rgb(241, 112, 241); */
+  width: 79%;
+  background-color: rgb(241, 112, 241);
+  transition: ease all .5s;
 }
 
 
 /* RE-DO SIDEBAR STYLES */
 #sidebar-main {
   float: right;
-  /* display: block; */
   text-align: center;
   width: 20%;
   height: 100%;
-  /* right: 70px; */
-  /* padding-top: 10px; */
-  /* border-top: 5Spx solid black; */
+  right: 30px;
   border-left: 1px solid black;
   box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
   /* position: absolute; */
+  transition: ease all .5s;
 }
 
 .sidebar-category {
@@ -114,7 +113,16 @@ h1 {
 }
 
 
+#ChatTabName {
+  font-size: 25px;
+  padding: 0px;
+  width: 25px;
+  transform: rotate(-90deg);
+}
 
+#ChatTab {
+  background-color: rgba(0, 0, 0, 0.281);
+}
 
 /* NAVBAR STYLES  */
 .active {
@@ -146,6 +154,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 35px;
 }
 
 /* #nav:hover {
@@ -278,7 +287,7 @@ h1 {
   /* right: 70px; */
   right: 0px;
   margin-top: 70px;
-  background-color: rgb(226, 226, 226);
+  /* background-color: rgb(226, 226, 226); */
   /* background-color: #111; */
   border: black 1px solid;
   overflow: hidden;
@@ -320,23 +329,14 @@ h1 {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-right .5s;
-  /* padding: 20px; */
+  margin-right: 25px;
 }
+
 .Dashboard {
   margin-top: 10px;
 
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 0px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-}
 
 
 
@@ -500,4 +500,78 @@ h1 {
   height: 30px;
   font-size: 1.1rem;
   text-align: center;
+}
+
+
+
+
+
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* MOBILE AND RESPONSIVE STYLES BELOW!!!!! */
+@media screen and (max-width: 1500px) {
+  #sidebar-main {
+    width: 24%;
+  }
+
+  #dash {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #sidebar-main {
+    width: 29%;
+  }
+
+  #dash {
+    width: 70%;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+  #dash {
+    width: 100%;
+    height: 50%;
+  }
+  .sidenav {
+    visibility: hidden;
+    width: 0;
+  }
+  #sidebar-main {
+    display:block;
+    float: none;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+  }
+  #nav {
+    float: left;
+    font-size: 40px;
+  }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+  .sidenav {
+    padding-top: 0px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
