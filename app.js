@@ -35,6 +35,9 @@ app.use(
 	})
 );
 
+
+
+
 // DISPLAY LOGIN PROMPT 
 app.get("/login", function (req, res) {
 	res.render("login", { layout: 'login' });
@@ -79,6 +82,16 @@ app.get('/addCourse', studentController.addCourseRoute);
 app.get('/newCourse', studentController.addCourseRoute);
 
 app.get('/:courseCode', studentController.classRoute);
+
+
+
+
+
+
+
+
+
+
 
 
 
