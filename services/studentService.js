@@ -29,6 +29,9 @@ const studentService = {
     },
     addNewCourse: async (newCourse) => {
         return new Course(newCourse).save()
+    },
+    addNewMessage: async (NewMessage) => {
+        return new Message(NewMessage).save()
     }
 
 }

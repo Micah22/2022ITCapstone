@@ -47,6 +47,18 @@ app.get("/register", function (req, res) {
 	res.render("register", { layout: 'login' });
 });
 
+app.post("/register", async function (req, res) {
+	if (req.body.username && req.body.password == req.body.verifyPassword) {
+	  await studentDB.register(new studentDB({ username: req.body.username }), req.body.password);
+	  req.flash('info', 'Thanks for registering!');
+	  console.log('Thanks for registering!')
+	} else {
+		req.flash('error', 'Passwords Do Not Match! Try Again!');
+		console.log('Passwords Do Not Match! Try Again!')
+	}
+	res.redirect("/login");
+	console.log('check')
+  });
 
 // Handle the login action
 app.post("/login", async function (req, res) {
@@ -84,23 +96,10 @@ app.get('/newCourse', studentController.addCourseRoute);
 app.get('/:courseCode', studentController.classRoute);
 
 
-const Post = require('./models/chatDB')
-var router = express.Router();
-router.post('/new', (req, res) => {
-	var post = new Post(req.body)
-	post.save(function(err, user) {
-		
-		if(err) console.log(err)
-		return res.send("Post has been saved!")
-	})
-})
-
-
-
-
-
-
-
+// const Chat = require('./models/chatDB')
+// app.post('/new', (req, res) => {
+// 	var 
+// })
 
 
 
