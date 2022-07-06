@@ -49,7 +49,14 @@
             </tr>
             <tr>
                 <td>
-                    <textarea></textarea>
+                    <form action="/dashboard" method="post">
+                    {{#each student}}
+                        <input type="text" name="studentId" value="{{studentId}}" size="5">
+                        <input type="text" name="userName" value="{{name}}" size="5">
+                    {{/each}}
+                        <input type="text" name="message" placeholder="Enter message here">
+                        <button type="submit">Send</button>
+                    </form>
                     {{!-- <iframe height="100%" src=""></iframe> --}}
                 </td>
             </tr>

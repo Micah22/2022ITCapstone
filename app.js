@@ -84,7 +84,16 @@ app.get('/newCourse', studentController.addCourseRoute);
 app.get('/:courseCode', studentController.classRoute);
 
 
-
+const Post = require('./models/chatDB')
+var router = express.Router();
+router.post('/new', (req, res) => {
+	var post = new Post(req.body)
+	post.save(function(err, user) {
+		
+		if(err) console.log(err)
+		return res.send("Post has been saved!")
+	})
+})
 
 
 

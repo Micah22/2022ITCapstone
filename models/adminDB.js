@@ -7,6 +7,4 @@ const adminSchema = mongoose.Schema({
   name: String
 });
 
-// Register each model with Mongoose.
-// There's no need to export here because mongoose is a singleton
 mongoose.model("Admin", adminSchema);
