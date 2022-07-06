@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(197, 227, 254);
+ }
+
+ /* LOGIN SCREEN FORM */
+ form {
+     padding: 40px 30px;
+     background: #b8b8b8;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding-bottom: 20px;
+     width: 300px;
+     box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
+ }
+
+
+ .SignInButton {
+     color: white;
+     background-color: rgb(0, 38, 255);
+     width: 50%;
+     font-size: 16px;
+     padding: 20px 5px;
+     height: 56px;
+     border: none;
+     border-bottom: solid 5px rgba(0, 0, 0, 0.1);
+     min-width: 280px;
+     box-sizing: border-box;
+     transition: all .3s linear;
+     font-weight: 400;
+     -webkit-appearance: none;
+     border-radius: 25px;
+ }
+
+ .SignInButton:hover {
+     background-color: rgb(1, 16, 104);
+     transition: all .3s;
+ }
+
+
+ .SignInFields {
+     font-size: 16px;
+     text-align: center;
+     padding: 20px 5px;
+     height: 56px;
+     border: none;
+     background: rgb(255, 255, 255);
+     min-width: 280px;
+     box-sizing: border-box;
+     transition: all .3s linear;
+     color: #000;
+     font-weight: 400;
+     -webkit-appearance: none;
+     border-radius: 25px;
+ }

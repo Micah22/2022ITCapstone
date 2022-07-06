@@ -57,7 +57,7 @@ h1 {
   /* display: block; */
   height: 100%;
   width: 79%;
-  background-color: rgb(241, 112, 241);
+  /* background-color: rgb(174, 174, 174); */
   transition: ease all .5s;
 }
 
