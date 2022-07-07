@@ -3,6 +3,24 @@
 This app is proof of concept for a capstone class. It is modeled after canvas, but includes more. This app includes a chatroom, embeded sites such as google docs, discord, and quizlet, and study group functionality.
 
 
+Works:
+Login Screen
+Multitask View
+Dashboard Navigation
+
+Working on/Still Developing:
+Register User
+
+Doesn't Work:
+Live Chat
+Add Course
+
+Has Placeholder/Proof of concept:
+Zoom
+
+In Que For Development:
+File Storage
+Admin Login
 
 
 TEST LOGIN CREDENTIALS
