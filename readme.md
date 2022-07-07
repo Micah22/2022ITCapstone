@@ -1,19 +1,18 @@
 # CollegeConnect App
 
-This app is proof of concept for a capstone class. It is modeled after canvas, but includes more. This app includes a chatroom, embeded sites such as google docs, discord, and quizlet, and study group functionality.
-
+This app is proof of concept for a capstone class. Below you can see our current development plans.
 
 Works:
 Login Screen
 Multitask View
-Dashboard Navigation
+Navbar
 
-Working on/Still Developing:
-Register User
+Still Developing:
+Registration/Add User Screen
+Live Chat
 
 Doesn't Work:
-Live Chat
-Add Course
+
 
 Has Placeholder/Proof of concept:
 Zoom
@@ -21,6 +20,7 @@ Zoom
 In Que For Development:
 File Storage
 Admin Login
+Add New Course
 
 
 TEST LOGIN CREDENTIALS

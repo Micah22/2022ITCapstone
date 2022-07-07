@@ -35,9 +35,6 @@ app.use(
 	})
 );
 
-
-
-
 // DISPLAY LOGIN PROMPT 
 app.get("/login", function (req, res) {
 	res.render("login", { layout: 'login' });
@@ -46,19 +43,6 @@ app.get("/login", function (req, res) {
 app.get("/register", function (req, res) {
 	res.render("register", { layout: 'login' });
 });
-
-app.post("/register", async function (req, res) {
-	if (req.body.username && req.body.password == req.body.verifyPassword) {
-	  await studentDB.register(new studentDB({ username: req.body.username }), req.body.password);
-	  req.flash('info', 'Thanks for registering!');
-	  console.log('Thanks for registering!')
-	} else {
-		req.flash('error', 'Passwords Do Not Match! Try Again!');
-		console.log('Passwords Do Not Match! Try Again!')
-	}
-	res.redirect("/login");
-	console.log('check')
-  });
 
 // Handle the login action
 app.post("/login", async function (req, res) {

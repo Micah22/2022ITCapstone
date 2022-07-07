@@ -1,9 +1,5 @@
 body {
   background-color: rgb(255, 255, 255);
-  /* background-color: rgb(241, 241, 241); */
-  /* width:90%; */
-  /* height: 100%; */
-  /* margin-left: 170px; */
 }
 
 h1 {
@@ -15,13 +11,12 @@ h1 {
   transition: 0.3s;
   border: 5px black;
   width: 300px;
-  display: block;
   /* height: 262px; */
+  display: block;
   padding: 5px;
   margin: 10px;
   float: left;
   background-color: rgb(70, 70, 70);
-  /* background-color: rgb(2, 0, 141); */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -71,7 +66,6 @@ h1 {
   right: 30px;
   border-left: 1px solid black;
   box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.8);
-  /* position: absolute; */
   transition: ease all .5s;
 }
 
@@ -126,8 +120,7 @@ h1 {
 
 /* NAVBAR STYLES  */
 .active {
-  background-color: #001d9e;
-  /* background-color: #04AA6D; */
+  background-color: #002fff;
 }
 
 #navBar {
@@ -157,10 +150,10 @@ h1 {
   font-size: 35px;
 }
 
-/* #nav:hover {
+#nav:hover {
   color: rgb(255, 255, 255);
   color: black;
-} */
+}
 
 .topnav-right {
   float: right;
