@@ -2,6 +2,7 @@
     {
         "studentId": 233067,
         "username": "mkb57",
+        "password": "1234",
         "name": "Micah",
         "year": "Senior",
         "classes": [
@@ -25,6 +26,7 @@
     {
         "studentId": 233068,
         "username": "drj35",
+        "password": "asK1m9",
         "name": "Derek",
         "year": "Senior",
         "classes": [
@@ -53,6 +55,7 @@
     {
         "studentId": 231643,
         "username": "jbb70",
+        "password": "d6mk9a",
         "name": "James",
         "year": "Junior",
         "classes": [
@@ -87,6 +90,7 @@
         "studentId": 20419,
         "username": "bsa13",
         "name": "Bruno",
+        "password": "U4dkY9",
         "year": "Senior",
         "classes": [
             {
@@ -114,6 +118,7 @@
     {
         "studentId": 26827,
         "username": "sej46",
+        "password": "H9IQvc",
         "name": "Sarah",
         "year": "Senior",
         "classes": [
